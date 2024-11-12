@@ -1,12 +1,53 @@
-import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google' 
+import './globals.css'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Pyramid Scene',
-  description: '3D Pyramid Scene created with Next.js and Three.js',
+  metadataBase: new URL('https://nonext.io'),
+  title: {
+    default: 'nonext | Modern Web Development',
+    template: '%s | nonext'
+  },
+  description: 'nonext creates modern, unique websites with cutting-edge technologies and stunning designs.',
+  keywords: ['web development', 'modern websites', 'React', 'Next.js', '3D web design'],
+  authors: [{ name: 'Michael Prietl' }, { name: 'Noel Hermann' }],
+  creator: 'nonext Team',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://nonext.io',
+    siteName: 'nonext',
+    title: 'nonext | Modern Web Development',
+    description: 'Crafting the future of web experiences with innovative designs and technologies.',
+    images: [
+      {
+        url: 'https://nonext.com/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'nonext - Modern Web Development'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'nonext | Modern Web Development',
+    description: 'Crafting the future of web experiences with innovative designs and technologies.',
+    creator: '@nonext',
+    images: ['https://nonext.com/og-image.png']
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  }, 
 }
 
 export default function RootLayout({
@@ -15,8 +56,40 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="en" className={inter.className}>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
+      <body>
+        <header>
+          {/* Add your header content here */}
+        </header>
+        <main>{children}</main>
+        <footer>
+          {/* Add your footer content here */}
+        </footer> 
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "nonext",
+              "url": "https://nonext.io",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": {
+                  "@type": "EntryPoint",
+                  "urlTemplate": "https://nonext.io/search?q={search_term_string}"
+                },
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
+      </body>
     </html>
   )
 }
