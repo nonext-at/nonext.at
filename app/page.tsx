@@ -4,7 +4,7 @@ import { useRef, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { AnimatePresence, motion } from 'framer-motion'
 import { FaGithub, FaInstagram, FaEnvelope, FaChevronDown } from 'react-icons/fa'
-import { Pyramid } from 'lucide-react'
+import { ChevronRight, Pyramid } from 'lucide-react'
 import PyramidScene from './pyramid-scene'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -47,24 +47,29 @@ export default function Home() {
     }, 30000)
   }
 
+  const [hoveredProject, setHoveredProject] = useState(null)
+
   const projects = [
     {
-      name: "Fränkis Pub",
-      description: "Eine schlichte one-pager Website mit den wichtigsten infos.",
+      name: "nonext.io",
+      description: "nonext is a sleek one-pager showcasing our top projects. It’s a simple and intuitive gateway to explore our work and collaborations.",
       image: "/Projekt1.png",
-      url: "https://fraenkis-pub.vercel.app"
+      url: "https://nonext.io",
+      tech: ["Next.js", "Tailwind CSS", "Vercel", "Three.js", "motion"]
     },
     {
-      name: "Project Beta",
-      description: "An innovative mobile-first design implementing the latest responsive web design principles.",
+      name: "Fränkis Pub",
+      description: "A modern, mobile-friendly site for Fränkis Pub. Discover events, browse the menu, and connect with your favorite local spot.",
       image: "/Projekt2.png",
-      url: "#"
+      url: "https://fraenkis.nonext.io",
+      tech: ["Next.js", "Tailwind CSS", "Vercel", "motion"]
     },
     {
-      name: "Project Gamma",
-      description: "A high-performance e-commerce platform built with Next.js, featuring server-side rendering and API routes.",
+      name: "Reality Break",
+      description: "The official site for Reality Break, featuring music, tour info, and band members. A seamless way for fans to connect with the band.",
       image: "/Projekt3.png",
-      url: "#"
+      url: "https://reality-break.nonext.io",
+      tech: ["Next.js", "Tailwind CSS", "Vercel", "motion"]
     }
   ]
 
@@ -184,7 +189,7 @@ export default function Home() {
               <section id="projects" className="py-20 px-4 bg-white text-black">
                 <div className="max-w-6xl mx-auto">
                   <motion.h2
-                    className="text-3xl font-bold mb-12 text-center"
+                    className="text-4xl font-bold mb-12 text-center"
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
@@ -198,17 +203,45 @@ export default function Home() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
                     {projects.map((project, index) => (
-                      <Card key={index}>
-                        <CardContent className="p-6">
-                          <img src={project.image} alt={project.name} className="w-full h-40 object-cover mb-4 rounded" />
-                          <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                          <p className="text-gray-600 mb-4">{project.description}</p>
-                          <Button
-                            variant="outline"
-                            onClick={() => window.open(project.url, '_blank')}
-                          >
-                            View Project
-                          </Button>
+                      <Card 
+                        key={index}
+                        className="bg-white text-black overflow-hidden transition-all duration-300 transform hover:scale-105 border border-gray-200"
+                        onMouseEnter={() => setHoveredProject(index)}
+                        onMouseLeave={() => setHoveredProject(null)}
+                      >
+                        <CardContent className="p-0">
+                          <div className="relative h-48 overflow-hidden">
+                            <img 
+                              src={project.image} 
+                              alt={project.name} 
+                              className="w-full h-full object-cover transition-all duration-300 transform hover:scale-110 filter grayscale"
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                              <Button
+                                variant="outline"
+                                className="text-black border-white hover:bg-white hover:text-black"
+                                onClick={() => window.open(project.url, '_blank')}
+                              >
+                                View Project
+                              </Button>
+                            </div>
+                          </div>
+                          <div className="p-6">
+                            <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
+                            <p className="text-gray-600 mb-4">{project.description}</p>
+                            <div className="flex flex-wrap gap-2 mb-4">
+                              {project.tech.map((tech, techIndex) => (
+                                <span key={techIndex} className="px-2 py-1 bg-gray-100 text-gray-800 text-xs rounded-full">{tech}</span>
+                              ))}
+                            </div>
+                            <Button
+                              variant="link"
+                              className="text-black hover:text-gray-600 p-0 h-auto font-normal"
+                              onClick={() => window.open(project.url, '_blank')}
+                            >
+                              Learn more <ChevronRight className="ml-1 h-4 w-4" />
+                            </Button>
+                          </div>
                         </CardContent>
                       </Card>
                     ))}
