@@ -37,7 +37,7 @@ export default function Home() {
     setShowGalaxyJourney(true)
     setTimeout(() => {
       setShowGalaxyJourney(false)
-    }, 1000000) // Journey lasts for 10 seconds
+    }, 15000) // Journey lasts for 10 seconds
   }
 
   const projects = [
