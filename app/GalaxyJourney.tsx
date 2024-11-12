@@ -74,9 +74,8 @@ function Galaxy({ count = 2000, size = 0.03, radius = 5, spin = 1, randomness = 
 
   return (
     //@ts-ignore
-    <group position={position} rotation={rotation}>
-      //@ts-ignore 
-      <points ref={points}>
+    <group position={position} rotation={rotation}> 
+      <points ref={points as any}>
         <bufferGeometry>
           <bufferAttribute
             attach="attributes-position"
