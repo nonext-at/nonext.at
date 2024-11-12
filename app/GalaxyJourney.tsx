@@ -278,13 +278,13 @@ export default function Component() {
         <Scene />
         {isAnimating ? <CinematicCamera /> : <OrbitControls />}
       </Canvas>
-      <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-50 p-4 text-white">
+      {/* <div className="absolute bottom-4 left-4 right-4 bg-black bg-opacity-50 p-4 text-white">
         <div className="flex justify-center">
           <Button onClick={() => setIsAnimating(!isAnimating)}>
             {isAnimating ? 'Stop Animation' : 'Start Animation'}
           </Button>
         </div>
-      </div>
+      </div> */}
     </div>
   )
 }
