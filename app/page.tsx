@@ -15,16 +15,23 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
   const [showGalaxyJourney, setShowGalaxyJourney] = useState(false)
 
-  useEffect(() => {
-    const updateHeight = () => {
-      if (heroRef.current) {
-        heroRef.current.style.height = `${window.innerHeight}px`
-      }
+  const updateHeight = () => {
+    if (heroRef.current) {
+      heroRef.current.style.height = `${window.innerHeight}px`
     }
+  }
+
+  useEffect(() => {
     updateHeight()
     window.addEventListener('resize', updateHeight)
     return () => window.removeEventListener('resize', updateHeight)
   }, [])
+
+  useEffect(() => {
+    if (!showGalaxyJourney) { 
+      setTimeout(updateHeight, 100)
+    }
+  }, [showGalaxyJourney])
 
   const scrollToAbout = () => {
     const aboutSection = document.getElementById('about')
@@ -37,7 +44,7 @@ export default function Home() {
     setShowGalaxyJourney(true)
     setTimeout(() => {
       setShowGalaxyJourney(false)
-    }, 15000) // Journey lasts for 15 seconds
+    }, 30000)
   }
 
   const projects = [
@@ -129,7 +136,7 @@ export default function Home() {
                   </Button>
                 </div>
 
-                <Canvas className="absolute inset-0">
+                <Canvas className="absolute inset-0" style={{ height: '100vh' }}>
                   <PyramidScene />
                 </Canvas>
 
