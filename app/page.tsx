@@ -174,9 +174,13 @@ export default function Home() {
                   >
                     <div className="text-center">
                       <img src="/maikeru.jpg" alt="Michael Prietl" className="w-40 h-40 rounded-full mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold mb-2">Michael Prietl</h3>
+                      <h3 className="text-xl font-semibold mb-2">
+                        <a href="https://michael.nonext.io" target="_blank" rel="noopener noreferrer">
+                          Michael Prietl
+                        </a>
+                      </h3>
                       <p>Front-/Backend Developer & Designer</p>
-                    </div>
+                    </div> 
                     <div className="text-center">
                       <img src="/nohell.png" alt="Noel Hermann" className="w-40 h-40 rounded-full mx-auto mb-4" />
                       <h3 className="text-xl font-semibold mb-2">Noel Hermann</h3>
