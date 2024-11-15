@@ -28,7 +28,7 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
                     <div className="text-center">
-                      <img src="/maikeru.jpg" alt="Michael Prietl" className="w-40 h-40 rounded-full mx-auto mb-4" />
+                      <img src="/maikeru.jpg" alt="Michael Prietl" className="w-40 h-40 rounded-full mx-auto mb-4 border-white border-solid border-4 shadow-lg" />
                       <h3 className="text-xl font-semibold mb-2 items-center flex justify-center gap-2 hover:underline">
                         <a href="https://michael.nonext.io" target="_blank" rel="noopener noreferrer">
                           Michael Prietl
@@ -38,7 +38,7 @@ export default function Hero() {
                       <p>Front-/Backend Developer & Designer</p>
                     </div>
                     <div className="text-center">
-                      <img src="/nohell.png" alt="Noel Hermann" className="w-40 h-40 rounded-full mx-auto mb-4" />
+                      <img src="/nohell.png" alt="Noel Hermann" className="w-40 h-40 rounded-full mx-auto mb-4 border-white border-solid border-4 shadow-lg" />
                       <h3 className="text-xl font-semibold mb-2 items-center flex justify-center gap-2 hover:underline">
                         <a href="https://noel.nonext.io" target="_blank" rel="noopener noreferrer">
                           Noel Hermann

@@ -43,7 +43,7 @@ export default function Services() {
     const [selectedService, setSelectedService] = useState(0);
 
     return (
-        <section id="services" className="py-20 px-4 bg-black text-white flex items-center flex-col h-[80rem] sm:h-[70rem] md:h-[50rem]">
+        <section id="services" className="py-20 px-4 bg-black text-white flex items-center flex-col h-[48rem] sm:h-[46rem] md:h-[48rem] lg:h-[40rem]">
             <div className="max-w-6xl mx-auto w-full">
                 <h2 className="text-4xl font-bold mb-12 text-center">
                     Our Services
@@ -83,18 +83,19 @@ export default function Services() {
                             <div
                                 key={index}
                                 className={`w-[calc(25%-1rem)] lg:w-[calc(20%-1rem)] rounded-lg border border-white/20 
-                                    transition-all duration-300 ease-in-out p-4 cursor-pointer
-                                    ${selectedService === index ? "opacity-50 pointer-events-none" : "hover:bg-white/5"}
-                                `}
+                transition-all duration-300 ease-in-out p-4 cursor-pointer
+                ${selectedService === index ? "opacity-50 pointer-events-none" : "hover:bg-white/5"}
+            `}
                                 onClick={() => setSelectedService(index)}
                             >
-                                <div className="text-center">
-                                    <div className="mb-2">{service.icon}</div>
-                                    <h4 className="text-sm font-medium">{service.name}</h4>
+                                <div className="flex flex-col items-center justify-center h-full text-center">
+                                    <div className="mb-2 flex items-center justify-center">{service.icon}</div>
+                                    <h4 className="text-xs sm:text-sm font-medium">{service.name}</h4>
                                 </div>
                             </div>
                         ))}
                     </div>
+
                 </div>
             </div>
         </section>
