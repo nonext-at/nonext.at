@@ -23,7 +23,7 @@ export default function CustomCursor() {
   }, [])
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-[100] mix-blend-difference">
+    <div className="opacity-0 lg:opacity-100 pointer-events-none fixed inset-0 z-[100] mix-blend-difference">
       <animated.div
         className="absolute h-8 w-8 -translate-x-1/2 -translate-y-1/2 rounded-full border-4 border-white"
         style={{
