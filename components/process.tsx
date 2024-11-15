@@ -52,7 +52,7 @@ export default function Process () {
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 * index }}
                       >
-                        <div className="flex justify-center items-center mb-4">
+                        <div className="flex justify-center items-center mb-4 drop-shadow-[0_0_25px_rgba(255,255,255,1)]">
                           {step.icon}
                         </div>
                         <h3 className="text-xl font-semibold mb-2">{index + 1 + ". " + step.title}</h3>
