@@ -48,6 +48,9 @@ export default function Home() {
       answer: "While we don't provide full content creation services, we can guide you on best practices and help integrate your content into the website design effectively."
     }
   ]
+
+  const [isHovered, setIsHovered] = useState(false)
+  const brandName = "nonext"
  
   return (
     <div className="relative w-full min-h-screen">
@@ -91,7 +94,27 @@ export default function Home() {
                   transition={{ duration: 0.5 }}
                 >
                   <Pyramid className="w-6 h-6 relative top-1" />
-                  <span>nonext</span>
+                  <motion.div
+          className="text-2xl font-bold"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
+          {brandName.split('').map((letter, index) => (
+            <motion.span
+              key={index}
+              animate={{
+                color: isHovered ? (Math.random() > 0.5 ? '#fff' : 'rgba(0,0,0,0)') : '#fff',
+              }}
+              transition={{ duration: 0.1 }}
+              className="inline-block"
+              style={{
+                textShadow: isHovered ? '2px 2px 0 rgba(255,255,255,0.0)' : 'none'
+              }}
+            >
+              {letter}
+            </motion.span>
+          ))}
+        </motion.div>
                 </motion.h1>
 
                 <motion.ul

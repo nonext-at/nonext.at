@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google' 
+import { Inter } from 'next/font/google'
 import './globals.css'
+import CustomCursor from '@/components/custom-cursor'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -47,7 +48,7 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  }, 
+  },
 }
 
 export default function RootLayout({
@@ -69,10 +70,13 @@ export default function RootLayout({
         <header>
           {/* Add your header content here */}
         </header>
-        <main>{children}</main>
+        <main>
+          {children}
+          <CustomCursor />
+        </main>
         <footer>
           {/* Add your footer content here */}
-        </footer> 
+        </footer>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
