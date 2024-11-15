@@ -19,7 +19,7 @@ export default function Hero() {
 
     return (
         <section ref={heroRef} className="relative overflow-hidden">
-            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 text-center">
+            <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 text-center select-none">
                 <h2 className="text-5xl font-bold mb-4">Welcome to nonext</h2>
                 <p className="text-xl mb-8">Creating modern, unique websites</p>
                 <Button onClick={scrollToAbout} variant="outline" className="text-black border-white hover:bg-white hover:text-black transition-colors">

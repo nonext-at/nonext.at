@@ -78,7 +78,7 @@ export default function Services() {
                     </div>
 
                     {/* Small Cards Row */}
-                    <div className="flex justify-between gap-4 flex-wrap">
+                    <div className="flex justify-between gap-4 flex-wrap select-none">
                         {services.map((service, index) => (
                             <div
                                 key={index}

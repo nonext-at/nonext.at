@@ -14,16 +14,16 @@ const Component = () => {
                     blurBorderColor={'#000'}
                 >
                     <Slider.Slide>
-                        <Image draggable={false} src="/spoe.png" alt="any" width={144} height={144} />
+                        <Image draggable={false} className='select-none' src="/spoe.png" alt="any" width={144} height={144} />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false} src="/fraenkis.png" alt="any2" className='scale-95' width={144} height={144} />
+                        <Image draggable={false} className='select-none scale-95' src="/fraenkis.png" alt="any2" width={144} height={144} />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false} src="/reality-break.png" className='scale-125' alt="any" width={144} height={144} />
+                        <Image draggable={false}className='select-none scale-125' src="/reality-break.png" alt="any" width={144} height={144} />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false} src="/nonext2.png" className='scale-150' alt="any2" width={144} height={144} />
+                        <Image draggable={false} className='select-none scale-150' src="/nonext2.png" alt="any2" width={144} height={144} />
                     </Slider.Slide>
                 </Slider>
             </div> 
