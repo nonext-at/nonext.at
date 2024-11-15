@@ -4,44 +4,21 @@ import { useRef, useEffect, useState } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { AnimatePresence, motion, useAnimation } from 'framer-motion'
 import { FaGithub, FaInstagram, FaEnvelope, FaChevronDown } from 'react-icons/fa'
-import { ChevronRight, Pyramid, ExternalLink, Coffee, PenTool, Rocket, MessageSquare } from 'lucide-react'
-import PyramidScene from './pyramid-scene'
+import { ChevronRight, Pyramid, ExternalLink, Coffee, PenTool, Rocket, MessageSquare, Code, Palette, Wrench, Search, Server } from 'lucide-react'
+import PyramidScene from '../components/pyramid-scene'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from 'next/link'
 import GalaxyJourney from './GalaxyJourney'
+import Hero from '@/components/hero'
+import About from '@/components/about'
+import Services from '@/components/services'
 
-export default function Home() {
-  const heroRef = useRef<HTMLDivElement>(null)
+export default function Home() { 
   const [showGalaxyJourney, setShowGalaxyJourney] = useState(false)
   const carouselRef = useRef<HTMLDivElement>(null)
   const carouselControls = useAnimation()
-
-  const updateHeight = () => {
-    if (heroRef.current) {
-      heroRef.current.style.height = `${window.innerHeight}px`
-    }
-  }
-
-  useEffect(() => {
-    updateHeight()
-    window.addEventListener('resize', updateHeight)
-    return () => window.removeEventListener('resize', updateHeight)
-  }, [])
-
-  useEffect(() => {
-    if (!showGalaxyJourney) { 
-      setTimeout(updateHeight, 100)
-    }
-  }, [showGalaxyJourney])
-
-  const scrollToAbout = () => {
-    const aboutSection = document.getElementById('about')
-    if (aboutSection) {
-      aboutSection.scrollIntoView({ behavior: 'smooth' })
-    }
-  }
 
   const startGalaxyJourney = () => {
     setShowGalaxyJourney(true)
@@ -50,6 +27,8 @@ export default function Home() {
     }, 30000)
   }
 
+  
+ 
   const [hoveredProject, setHoveredProject] = useState(null)
 
   const projects = [
@@ -145,6 +124,8 @@ export default function Home() {
     animateCarousel()
   }, [carouselControls])
 
+  
+
   return (
     <div className="relative w-full min-h-screen">
       <AnimatePresence mode="wait">
@@ -204,77 +185,12 @@ export default function Home() {
             </header>
 
             <main>
-              <section ref={heroRef} className="relative overflow-hidden">
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-40 text-center">
-                  <h2 className="text-5xl font-bold mb-4">Welcome to nonext</h2>
-                  <p className="text-xl mb-8">Creating modern, unique websites</p>
-                  <Button onClick={scrollToAbout} variant="outline" className="text-black border-white hover:bg-white hover:text-black transition-colors">
-                    Explore Our Work
-                  </Button>
-                </div>
+              
+              <Hero />
 
-                <Canvas className="absolute inset-0" style={{ height: '100vh' }}>
-                  <PyramidScene />
-                </Canvas>
+              <About />
 
-                <motion.div
-                  className="absolute bottom-4 transform -translate-x-1/2 cursor-pointer w-full flex justify-center items-center"
-                  initial={{ opacity: 0, y: -20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 1 }}
-                  onClick={scrollToAbout}
-                >
-                  <FaChevronDown className="text-4xl animate-bounce text-white" />
-                </motion.div>
-              </section>
-
-              <section id="about" className="py-20 px-4">
-                <div className="max-w-4xl mx-auto">
-                  <motion.h2
-                    className="text-3xl font-bold text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    About Us
-                  </motion.h2>
-                  <motion.p
-                    className="text-md text-gray-200 mb-8 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5 }}
-                  >
-                    Feel free to check out our profiles.
-                  </motion.p>
-                  <motion.div
-                    className="grid grid-cols-1 md:grid-cols-2 gap-12"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: 0.2 }}
-                  >
-                    <div className="text-center">
-                      <img src="/maikeru.jpg" alt="Michael Prietl" className="w-40 h-40 rounded-full mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold mb-2 items-center flex justify-center gap-2 hover:underline">
-                        <a href="https://michael.nonext.io" target="_blank" rel="noopener noreferrer">
-                          Michael Prietl
-                        </a> 
-                        <ExternalLink className='w-4 h-4'></ExternalLink>
-                      </h3>
-                      <p>Front-/Backend Developer & Designer</p>
-                    </div> 
-                    <div className="text-center">
-                      <img src="/nohell.png" alt="Noel Hermann" className="w-40 h-40 rounded-full mx-auto mb-4" />
-                      <h3 className="text-xl font-semibold mb-2 items-center flex justify-center gap-2 hover:underline">
-                        <a href="https://noel.nonext.io" target="_blank" rel="noopener noreferrer">
-                          Noel Hermann
-                        </a> 
-                        <ExternalLink className='w-4 h-4'></ExternalLink>
-                      </h3>
-                      <p>Front-/Backend Developer & Database Engineer</p>
-                    </div>
-                  </motion.div>
-                </div>
-              </section>
+              <Services />
 
               <section id="projects" className="py-20 px-4 bg-white text-black">
                 <div className="max-w-6xl mx-auto">
@@ -293,7 +209,7 @@ export default function Home() {
                     transition={{ duration: 0.5, delay: 0.2 }}
                   >
                     {projects.map((project, index) => (
-                      <Card 
+                      <Card
                         key={index}
                         className="bg-white text-black overflow-hidden transition-all duration-300 transform hover:scale-105 border border-gray-200"
                         onMouseEnter={() => setHoveredProject(index)}
@@ -301,9 +217,9 @@ export default function Home() {
                       >
                         <CardContent className="p-0 group">
                           <div className="relative h-48 overflow-hidden">
-                            <img 
-                              src={project.image} 
-                              alt={project.name} 
+                            <img
+                              src={project.image}
+                              alt={project.name}
                               className="w-full h-full object-cover transition-all duration-300 transform group-hover:scale-110 filter grayscale"
                             />
                             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center sm:opacity-0 group-hover:opacity-100 opacity-100 transition-opacity duration-300">
@@ -374,7 +290,7 @@ export default function Home() {
                 </div>
               </section>
 
-              <section id="customers" className="py-20 px-4 bg-white text-black overflow-hidden">
+              <section id="customers" className="py-20 px-4 bg-black text-white overflow-hidden">
                 <div className="max-w-6xl mx-auto">
                   <motion.h2
                     className="text-4xl font-bold mb-12 text-center"
@@ -401,7 +317,7 @@ export default function Home() {
                 </div>
               </section>
 
-              <section id="faq" className="py-20 px-4 bg-black text-white">
+              <section id="faq" className="py-20 px-4 bg-white text-black">
                 <div className="max-w-4xl mx-auto">
                   <motion.h2
                     className="text-4xl font-bold mb-12 text-center"
