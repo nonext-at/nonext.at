@@ -15,7 +15,7 @@ interface ProjectModalProps {
     url: string
     tech: string[]
     fullDescription: string
-    duration: number 
+    duration: number
     performance: number
     accessibility: number
     bestPractices: number
@@ -110,10 +110,10 @@ export function ViewDetails({ project, isOpen, onClose }: ProjectModalProps) {
                   </div>
                   <span className="text-lg text-white/70">{project.duration}</span>
                 </div>
-              </div> 
+              </div>
             </div>
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">Performance Insights</h3>
+            <div className="select-none">
+              <h3 className="text-2xl font-semibold mb-6 select-none">Performance Insights</h3>
               <div className="grid grid-cols-3 gap-4">
                 {['performance', 'accessibility'].map((metric) => (
                   <div key={metric} className="flex flex-col items-center">
@@ -145,7 +145,7 @@ export function ViewDetails({ project, isOpen, onClose }: ProjectModalProps) {
                       })}
                     />
                   </div>
-                  <p className="mt-2 text-lg font-semibold">Overall</p>
+                  <p className="mt-2 text-lg font-semibold select-none">Overall</p>
                 </div>
                 {['bestPractices', 'seo'].map((metric) => (
                   <div key={metric} className="flex flex-col items-center">
