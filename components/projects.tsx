@@ -11,7 +11,7 @@ export default function Projects() {
     {
       name: "nonext.io",
       description: "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.",
-      image: "/Projekt1.png",
+      image: "/projekte/Projekt1.png",
       url: "https://nonext.io",
       tech: ["Next.js", "Tailwind CSS", "Vercel", "Three.js", "motion"],
       fullDescription: "nonext.io ist unser Flaggschiffprojekt und dient als dynamisches Portfolio unserer besten Arbeiten. Es kombiniert modernste Webtechnologien, um ein nahtloses, interaktives Benutzererlebnis zu schaffen, das unsere Fähigkeiten in der Webentwicklung und im Design hervorhebt. Die Seite bietet ein modernes, minimalistisches Design mit flüssigen Animationen und 3D-Elementen, die unser Portfolio zum Leben erwecken. Wir haben serverseitiges Rendering implementiert, um die SEO und die Ladezeiten zu verbessern, und Three.js für beeindruckende 3D-Grafiken verwendet.",
@@ -31,7 +31,7 @@ export default function Projects() {
     {
       name: "Fränkis Pub",
       description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
-      image: "/Projekt2.png",
+      image: "/projekte/Projekt2.png",
       url: "https://fraenkis.nonext.io",
       tech: ["Next.js", "Tailwind CSS", "Vercel", "motion"],
       fullDescription: "Die Website von Fränkis Pub ist eine lebendige, benutzerfreundliche Plattform, die die Online-Präsenz des Pubs verbessert. Sie bietet eine intuitive Oberfläche zum Durchsuchen von Menüs, Überprüfen von Veranstaltungsplänen und Reservieren. Die Seite ist für mobile Geräte optimiert und umfasst eine Integration mit sozialen Medien, um die Reichweite zu erhöhen.",
@@ -51,7 +51,7 @@ export default function Projects() {
     {
       name: "Reality Break",
       description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.",
-      image: "/Projekt3.png",
+      image: "/projekte/Projekt3.webp",
       url: "https://reality-break.nonext.io",
       tech: ["Next.js", "Tailwind CSS", "Vercel", "motion"],
       fullDescription: "Die Website von Reality Break ist eine dynamische Plattform, um Fans mit der Band zu verbinden. Sie präsentiert Musik, kommende Tourdaten und Bandinformationen in einem ansprechenden, interaktiven Format.",
