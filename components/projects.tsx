@@ -18,7 +18,7 @@ export default function Projects() {
       duration: "5 Wochen",
       performance: 68,
       accessibility: 91,
-      bestPractices: 100, 
+      bestPractices: 100,
       seo: 100,
       metrics: {
         fcp: "0,4s",
