@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 export default function FAQ() {
   const faqs = [
     {
-      question: "What technologies do you use?",
-      answer: "We primarily use modern web technologies such as React, Next.js, and Tailwind CSS. We also have experience with various backend technologies and databases.",
+      question: "Welche Technologien verwenden Sie?",
+      answer: "Wir verwenden hauptsächlich moderne Webtechnologien wie React, Next.js und Tailwind CSS. Darüber hinaus haben wir Erfahrung mit verschiedenen Backend-Technologien und Datenbanken.",
     },
     {
-      question: "How long does it typically take to complete a project?",
-      answer: "Project timelines can vary depending on the scope and complexity. A simple website might take 2-4 weeks, while more complex projects could take 2-3 months or more.",
+      question: "Wie lange dauert es in der Regel, ein Projekt abzuschließen?",
+      answer: "Die Projektlaufzeit kann je nach Umfang und Komplexität variieren. Eine einfache Website kann 2-4 Wochen dauern, während komplexere Projekte 2-3 Monate oder länger benötigen können.",
     },
     {
-      question: "Do you offer ongoing support after the website is launched?",
-      answer: "Yes, we offer maintenance packages to keep your website up-to-date, secure, and running smoothly after launch.",
+      question: "Bieten Sie nach dem Start der Website fortlaufende Unterstützung an?",
+      answer: "Ja, wir bieten Wartungspakete an, um Ihre Website nach dem Start aktuell, sicher und reibungslos zu halten.",
     },
     {
-      question: "Can you help with content creation for my website?",
-      answer: "While we don't provide full content creation services, we can guide you on best practices and help integrate your content into the website design effectively.",
+      question: "Können Sie bei der Erstellung von Inhalten für meine Website helfen?",
+      answer: "Während wir keine vollständigen Inhalte erstellen, können wir Sie zu Best Practices beraten und Ihre Inhalte effektiv in das Webdesign integrieren.",
     },
   ];
 
@@ -30,7 +30,7 @@ export default function FAQ() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Frequently Asked Questions
+          Häufig gestellte Fragen
         </motion.h2>
         <motion.div
           initial={{ opacity: 0, y: 20 }}

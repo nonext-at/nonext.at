@@ -3,7 +3,7 @@ import { FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
 
 export default function Contact() {
     return (
-        <section id="contact" className="py-20 px-4">
+        <section id="contact" className="pt-20 pb-10 px-4">
             <div className="max-w-4xl mx-auto text-center">
                 <motion.h2
                     className="text-3xl font-bold mb-8"
@@ -11,7 +11,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                 >
-                    Get in Touch
+                    Kontakt aufnehmen
                 </motion.h2>
                 <motion.p
                     className="mb-8"
@@ -19,7 +19,7 @@ export default function Contact() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                    Have a project in mind? Let's create something amazing together.
+                    Haben Sie ein Projekt im Kopf? Lassen Sie uns gemeinsam etwas Großartiges schaffen.
                 </motion.p>
                 <motion.div
                     className="flex justify-center space-x-6"

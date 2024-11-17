@@ -11,7 +11,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    About Us
+                    Über uns
                   </motion.h2>
                   <motion.p
                     className="text-md text-gray-800 mb-8 text-center"
@@ -19,7 +19,7 @@ export default function Hero() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    Feel free to check out our profiles.
+                    ühlen Sie sich frei, unsere Profile anzusehen.
                   </motion.p>
                   <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 gap-12"
@@ -35,7 +35,7 @@ export default function Hero() {
                         </a>
                         <ExternalLink className='w-4 h-4'></ExternalLink>
                       </h3>
-                      <p>Front-/Backend Developer & Designer</p>
+                      <p>Front-/Backend Entwickler & Designer</p>
                     </div>
                     <div className="text-center">
                       <img draggable={false} src="/nohell.png" alt="Noel Hermann" className="w-40 h-40 rounded-full mx-auto mb-4 border-2 border-black/20" />
@@ -45,7 +45,7 @@ export default function Hero() {
                         </a>
                         <ExternalLink className='w-4 h-4'></ExternalLink>
                       </h3>
-                      <p>Front-/Backend Developer & Database Engineer</p>
+                      <p>Front-/Backend Entwickler & Datenbank-Ingenieur</p>
                     </div>
                   </motion.div>
                 </div>

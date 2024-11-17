@@ -10,68 +10,68 @@ export default function Projects() {
   const projects = [
     {
       name: "nonext.io",
-      description: "nonext is a sleek one-pager showcasing our top projects. It’s a simple and intuitive gateway to explore our work and collaborations.",
+      description: "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.",
       image: "/Projekt1.png",
       url: "https://nonext.io",
       tech: ["Next.js", "Tailwind CSS", "Vercel", "Three.js", "motion"],
-      fullDescription: "nonext.io is our flagship project, serving as a dynamic portfolio of our best work. It combines cutting-edge web technologies to create a seamless, interactive user experience that highlights our capabilities in web development and design. The site features a modern, minimalist design with smooth animations and 3D elements, showcasing our expertise in creating visually stunning and high-performance web applications. We've implemented server-side rendering for improved SEO and initial load times, and utilized Three.js for immersive 3D graphics that bring our portfolio to life.",
-      duration: "5 weeks",
+      fullDescription: "nonext.io ist unser Flaggschiffprojekt und dient als dynamisches Portfolio unserer besten Arbeiten. Es kombiniert modernste Webtechnologien, um ein nahtloses, interaktives Benutzererlebnis zu schaffen, das unsere Fähigkeiten in der Webentwicklung und im Design hervorhebt. Die Seite bietet ein modernes, minimalistisches Design mit flüssigen Animationen und 3D-Elementen, die unser Portfolio zum Leben erwecken. Wir haben serverseitiges Rendering implementiert, um die SEO und die Ladezeiten zu verbessern, und Three.js für beeindruckende 3D-Grafiken verwendet.",
+      duration: "5 Wochen",
       performance: 68,
       accessibility: 91,
       bestPractices: 100, 
       seo: 100,
       metrics: {
-        fcp: "0.4s",
-        lcp: "4.9s",
+        fcp: "0,4s",
+        lcp: "4,9s",
         tbt: "0ms",
         cls: "0",
-        si: "4.0s"
+        si: "4,0s"
       }
     },
     {
       name: "Fränkis Pub",
-      description: "A modern, mobile-friendly site for Fränkis Pub. Discover events, browse the menu, and connect with your favorite local spot.",
+      description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
       image: "/Projekt2.png",
       url: "https://fraenkis.nonext.io",
       tech: ["Next.js", "Tailwind CSS", "Vercel", "motion"],
-      fullDescription: "Fränkis Pub website is a vibrant, user-friendly platform designed to enhance the pub's online presence. It features an intuitive interface for browsing menus, checking event schedules, and making reservations, all while capturing the unique atmosphere of the pub. The site is optimized for mobile devices, ensuring a seamless experience for users on the go, and includes integration with social media platforms to boost engagement and reach. We've implemented a custom CMS using Supabase, allowing the pub owners to easily update menus, events, and other content. The reservation system is integrated with the pub's internal management software for streamlined operations.",
-      duration: "2 weeks",
+      fullDescription: "Die Website von Fränkis Pub ist eine lebendige, benutzerfreundliche Plattform, die die Online-Präsenz des Pubs verbessert. Sie bietet eine intuitive Oberfläche zum Durchsuchen von Menüs, Überprüfen von Veranstaltungsplänen und Reservieren. Die Seite ist für mobile Geräte optimiert und umfasst eine Integration mit sozialen Medien, um die Reichweite zu erhöhen.",
+      duration: "2 Wochen",
       performance: 100,
       accessibility: 100,
       bestPractices: 100,
       seo: 100,
       metrics: {
-        fcp: "0.4s",
-        lcp: "0.7s",
+        fcp: "0,4s",
+        lcp: "0,7s",
         tbt: "0ms",
-        cls: "0.01",
-        si: "0.4s"
+        cls: "0,01",
+        si: "0,4s"
       }
     },
     {
       name: "Reality Break",
-      description: "The official site for Reality Break, featuring music, tour info, and band members. A seamless way for fans to connect with the band.",
+      description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.",
       image: "/Projekt3.png",
       url: "https://reality-break.nonext.io",
       tech: ["Next.js", "Tailwind CSS", "Vercel", "motion"],
-      fullDescription: "Reality Break's website is a dynamic platform for the band to connect with their fans. It showcases their music, upcoming tour dates, and band information in an engaging, interactive format. The site also includes e-commerce functionality for merchandise sales, a media gallery with high-quality images and videos, and a blog section for band updates. Special attention was given to creating an immersive audio experience, allowing fans to preview tracks directly on the site. We've integrated Stripe for secure payment processing and Sanity.io as a headless CMS, giving the band full control over their content. The tour section includes an interactive map and integrates with ticketing platforms for seamless ticket purchases.",
-      duration: "3 weeks",
+      fullDescription: "Die Website von Reality Break ist eine dynamische Plattform, um Fans mit der Band zu verbinden. Sie präsentiert Musik, kommende Tourdaten und Bandinformationen in einem ansprechenden, interaktiven Format.",
+      duration: "3 Wochen",
       performance: 100,
       accessibility: 96,
       bestPractices: 100,
       seo: 100,
       metrics: {
-        fcp: "0.3s",
-        lcp: "0.4s",
+        fcp: "0,3s",
+        lcp: "0,4s",
         tbt: "0ms",
         cls: "0",
-        si: "0.5s"
+        si: "0,5s"
       }
     }
-  ]
+  ];
 
-  const [hoveredProject, setHoveredProject] = useState(null)
-  const [selectedProject, setSelectedProject] = useState(null)
+  const [hoveredProject, setHoveredProject] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
 
   return (
     <section id="projects" className="py-20 px-10 sm:px-4 bg-white text-black">
@@ -82,7 +82,7 @@ export default function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Our Projects
+          Unsere Projekte
         </motion.h2>
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -110,7 +110,7 @@ export default function Projects() {
                       className="text-black"
                       onClick={() => setSelectedProject(project)}
                     >
-                      View Project
+                      Projekt ansehen
                     </Button>
                   </div>
                 </div>
@@ -132,7 +132,7 @@ export default function Projects() {
                     className="text-black hover:text-gray-600 p-0 h-auto font-normal"
                     onClick={() => window.open(project.url, '_blank')}
                   >
-                    Visit Page <ChevronRight className="ml-1 h-4 w-4" />
+                    Seite besuchen <ChevronRight className="ml-1 h-4 w-4" />
                   </Button>
                 </div>
               </CardContent>
@@ -149,5 +149,5 @@ export default function Projects() {
         />
       )}
     </section>
-  )
+  );
 }

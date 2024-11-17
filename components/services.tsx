@@ -8,27 +8,27 @@ export default function Services() {
         {
             icon: <Palette className="w-12 h-12" />,
             name: "Design",
-            description: "Custom UI/UX design tailored to your brand, creating visually stunning and intuitive interfaces that captivate your audience and enhance user engagement."
+            description: "Individuelles UI/UX-Design, abgestimmt auf Ihre Marke, mit visuell beeindruckenden und intuitiven Oberflächen, die Ihr Publikum fesseln und die Nutzerbindung verbessern."
         },
         {
             icon: <Code className="w-12 h-12" />,
-            name: "Development",
-            description: "Full-stack web development using cutting-edge technologies, building robust, scalable, and high-performance applications that meet your specific business needs."
+            name: "Entwicklung",
+            description: "Full-Stack-Webentwicklung mit modernster Technologie, um robuste, skalierbare und leistungsstarke Anwendungen zu erstellen, die Ihren spezifischen Geschäftsanforderungen entsprechen."
         },
         {
             icon: <Wrench className="w-12 h-12" />,
-            name: "Maintenance",
-            description: "Ongoing support and updates for your website, ensuring optimal performance, security, and compatibility with the latest web standards and technologies."
+            name: "Wartung",
+            description: "Laufende Unterstützung und Aktualisierungen für Ihre Website, um optimale Leistung, Sicherheit und Kompatibilität mit den neuesten Webstandards und Technologien zu gewährleisten."
         },
         {
             icon: <Search className="w-12 h-12" />,
             name: "SEO",
-            description: "Search engine optimization to improve your online visibility, implementing strategies to boost your website's ranking and drive organic traffic to your business."
+            description: "Suchmaschinenoptimierung zur Verbesserung Ihrer Online-Sichtbarkeit, Implementierung von Strategien, um das Ranking Ihrer Website zu steigern und organischen Traffic für Ihr Unternehmen zu gewinnen."
         },
         {
             icon: <Server className="w-12 h-12" />,
             name: "Hosting",
-            description: "Reliable and secure hosting solutions for your website, providing fast loading times, high uptime, and robust security measures to protect your online presence."
+            description: "Zuverlässige und sichere Hosting-Lösungen für Ihre Website, mit schnellen Ladezeiten, hoher Verfügbarkeit und robusten Sicherheitsmaßnahmen zum Schutz Ihrer Online-Präsenz."
         }
     ];
 
@@ -46,7 +46,7 @@ export default function Services() {
         <section id="services" className="py-20 px-4 bg-black text-white flex items-center flex-col h-[48rem] sm:h-[46rem] md:h-[48rem] lg:h-[40rem]">
             <div className="max-w-6xl mx-auto w-full">
                 <h2 className="text-4xl font-bold mb-12 text-center">
-                    Our Services
+                    Unsere Dienste
                 </h2>
                 <div className="flex flex-col gap-6">
                     {/* Selected Card */}
@@ -71,7 +71,7 @@ export default function Services() {
                                     variant="outline"
                                     className="mt-4 border-white text-black hover:bg-white hover:text-black transition-colors"
                                 >
-                                    Learn More <ChevronRight className="ml-2 h-4 w-4" />
+                                    Erfahre mehr <ChevronRight className="ml-2 h-4 w-4" />
                                 </Button>
                             </div>
                         </div>

@@ -18,7 +18,7 @@ import Projects from '@/components/projects'
 import Process from '@/components/process'
 import Customers from '@/components/customers'
 import FAQ from '@/components/faq'
-import Contact from '@/components/ui/contact'
+import Contact from '@/components/contact'
 
 export default function Home() {
   const [showGalaxyJourney, setShowGalaxyJourney] = useState(false)
@@ -123,9 +123,9 @@ export default function Home() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <li><a href="#about" className="hover:text-gray-300 transition-colors">About</a></li>
-                  <li><a href="#projects" className="hover:text-gray-300 transition-colors">Projects</a></li>
-                  <li><a href="#contact" className="hover:text-gray-300 transition-colors">Contact</a></li>
+                  <li><a href="#about" className="hover:text-gray-300 transition-colors">Über uns</a></li>
+                  <li><a href="#projects" className="hover:text-gray-300 transition-colors">Projekte</a></li>
+                  <li><a href="#contact" className="hover:text-gray-300 transition-colors">Kontakt</a></li>
                 </motion.ul>
               </nav>
             </header>
@@ -149,13 +149,16 @@ export default function Home() {
               <Contact />
             </main>
 
-            <footer className="py-6 px-4 text-center text-sm">
+            <footer className="py-6 px-4 text-center text-sm text-gray-500">
               <p>&copy; 2024 nonext. All rights reserved.</p>
+              <p className="text-gray-500 text-sm mt-1">
+                    Made with 🤍 by <a href="https://www.nonext.io/" target="_blank" className="text-gray-300">nonext.io</a>
+                </p>
               <button
-                className="mt-2 text-xs text-gray-500 hover:text-gray-300 transition-colors"
+                className=" text-[0.7rem] text-gray-500 hover:text-gray-300 transition-colors"
                 onClick={startGalaxyJourney}
               >
-                Do not click me
+                Klick mich nicht an
               </button>
             </footer>
           </motion.div>

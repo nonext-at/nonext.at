@@ -7,23 +7,23 @@ export default function Process () {
     const processSteps = [
         {
           icon: <Coffee className="w-12 h-12 mb-4" />,
-          title: "Initial Consultation",
-          description: "We meet with you to discuss your vision, goals, and requirements for the project."
+          title: "Erstberatung",
+          description: "Wir treffen uns mit Ihnen, um Ihre Vision, Ziele und Anforderungen für das Projekt zu besprechen."
         },
         {
           icon: <PenTool className="w-12 h-12 mb-4" />,
-          title: "Design & Planning",
-          description: "Our team creates detailed wireframes and designs based on your input and feedback."
+          title: "Design & Planung",
+          description: "Unser Team erstellt detaillierte Wireframes und Designs basierend auf Ihrem Input und Feedback."
         },
         {
           icon: <Rocket className="w-12 h-12 mb-4" />,
-          title: "Development & Testing",
-          description: "We build your website using cutting-edge technologies, ensuring a smooth and responsive experience."
+          title: "Entwicklung & Test",
+          description: "Wir bauen Ihre Website mit modernsten Technologien und sorgen für eine reibungslose und responsive Erfahrung."
         },
         {
           icon: <MessageSquare className="w-12 h-12 mb-4" />,
-          title: "Review & Refinement",
-          description: "We present the finished product and make any necessary adjustments based on your feedback."
+          title: "Prüfen & Verfeinerung",
+          description: "Wir präsentieren das fertige Produkt und nehmen basierend auf Ihrem Feedback notwendige Anpassungen vor."
         }
     ]
       
@@ -36,7 +36,7 @@ export default function Process () {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
                   >
-                    Our Process
+                    Unser Prozess
                   </motion.h2>
                   <motion.div
                     className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
