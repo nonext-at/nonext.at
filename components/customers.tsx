@@ -23,7 +23,7 @@ const Component = () => {
                         <Image draggable={false}className='select-none scale-125' src="/reality-break.png" alt="any" width={144} height={144} />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false} className='select-none scale-150' src="/nonext2.png" alt="any2" width={144} height={144} />
+                        <Image draggable={false} className='select-none scale-150' src="/logo_white_transparent.png" alt="any2" width={144} height={144} />
                     </Slider.Slide>
                 </Slider>
             </div> 

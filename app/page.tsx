@@ -8,6 +8,7 @@ import { ChevronRight, Pyramid, ExternalLink, Coffee, PenTool, Rocket, MessageSq
 import PyramidScene from '../components/pyramid-scene'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
+import Image from 'next/image'
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Link from 'next/link'
 import GalaxyJourney from '@/components/GalaxyJourney'
@@ -28,8 +29,8 @@ export default function Home() {
     setTimeout(() => {
       setShowGalaxyJourney(false)
     }, 30000)
-  } 
-    
+  }
+
   const faqs = [
     {
       question: "What technologies do you use?",
@@ -49,9 +50,9 @@ export default function Home() {
     }
   ]
 
-  const [isHovered, setIsHovered] = useState(false)
-  const brandName = "nonext"
- 
+  /* const [isHovered, setIsHovered] = useState(false) */
+  /* const brandName = "nonext" */
+
   return (
     <div className="relative w-full min-h-screen">
       <AnimatePresence mode="wait">
@@ -87,7 +88,7 @@ export default function Home() {
           >
             <header className="fixed top-0 left-0 right-0 z-50 p-4 bg-black/50 backdrop-blur-md">
               <nav className="flex justify-between items-center max-w-6xl mx-auto">
-                <motion.h1
+                {/* <motion.h1
                   className="text-2xl font-bold flex items-center space-x-2"
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -95,27 +96,28 @@ export default function Home() {
                 >
                   <Pyramid className="w-6 h-6 relative top-1" />
                   <motion.div
-          className="text-2xl font-bold"
-          onMouseEnter={() => setIsHovered(true)}
-          onMouseLeave={() => setIsHovered(false)}
-        >
-          {brandName.split('').map((letter, index) => (
-            <motion.span
-              key={index}
-              animate={{
-                color: isHovered ? (Math.random() > 0.5 ? '#fff' : 'rgba(0,0,0,0)') : '#fff',
-              }}
-              transition={{ duration: 0.1 }}
-              className="inline-block"
-              style={{
-                textShadow: isHovered ? '2px 2px 0 rgba(255,255,255,0.0)' : 'none'
-              }}
-            >
-              {letter}
-            </motion.span>
-          ))}
-        </motion.div>
-                </motion.h1>
+                    className="text-2xl font-bold"
+                    onMouseEnter={() => setIsHovered(true)}
+                    onMouseLeave={() => setIsHovered(false)}
+                  >
+                    {brandName.split('').map((letter, index) => (
+                      <motion.span
+                        key={index}
+                        animate={{
+                          color: isHovered ? (Math.random() > 0.5 ? '#fff' : 'rgba(0,0,0,0)') : '#fff',
+                        }}
+                        transition={{ duration: 0.1 }}
+                        className="inline-block"
+                        style={{
+                          textShadow: isHovered ? '2px 2px 0 rgba(255,255,255,0.0)' : 'none'
+                        }}
+                      >
+                        {letter}
+                      </motion.span>
+                    ))}
+                  </motion.div>
+                </motion.h1> */}
+                <Image src="/logo_white_transparent.png" draggable={false} alt="Brands Logo" width={125} height={0} className='select-none' />
 
                 <motion.ul
                   className="flex space-x-6"
@@ -152,8 +154,8 @@ export default function Home() {
             <footer className="py-6 px-4 text-center text-sm text-gray-500">
               <p>&copy; 2024 nonext. All rights reserved.</p>
               <p className="text-gray-500 text-sm mt-1">
-                    Made with 🤍 by <a href="https://www.nonext.io/" target="_blank" className="text-gray-300">nonext.io</a>
-                </p>
+                Made with 🤍 by <a href="https://www.nonext.io/" target="_blank" className="text-gray-300">nonext.io</a>
+              </p>
               <button
                 className=" text-[0.7rem] text-gray-500 hover:text-gray-300 transition-colors"
                 onClick={startGalaxyJourney}
