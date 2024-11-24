@@ -4,11 +4,11 @@ import Slider from 'react-infinite-logo-slider';
 const Component = () => {
     return (
         <section id="customers" className="py-20 px-4 bg-black text-white overflow-hidden">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-5xl mx-auto">
                 <h2 className="text-4xl font-bold mb-12 text-center">Unsere Kunden</h2> 
                 <Slider
                     width="400px"
-                    duration={10}
+                    duration={20}
                     pauseOnHover={false}
                     blurBorders={false}
                     blurBorderColor={'#000'}

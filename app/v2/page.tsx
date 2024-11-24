@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react"
 import { motion, useAnimation, useInView, AnimatePresence } from "framer-motion"
-import { Code, Palette, Zap, Search, Server, Users, ArrowRight, ExternalLink, ChevronLeft, ChevronRight, Github, Linkedin, Mail, Globe, Coffee, ChevronUp, ChevronDown, MessageSquare, PenTool, Code2, CheckCircle, Target, Lightbulb, Rocket } from 'lucide-react'
+import { Code, Palette, Zap, Search, Server, Users, ArrowRight, ExternalLink, ChevronLeft, ChevronRight, Github, Linkedin, Mail, Globe, Coffee, ChevronUp, ChevronDown, MessageSquare, PenTool, Code2, CheckCircle, Target, Lightbulb, Rocket, Instagram } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -10,7 +10,33 @@ import { Badge } from "@/components/ui/badge"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import SpinningPyramid from "./SpinningPyramid"
 import PyramidScene from "@/components/pyramid-scene"
+import Customers from '@/components/customers'
 import { Canvas } from "@react-three/fiber"
+
+function Header() {
+    const scrollToSection = (sectionId) => {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
+  
+    return (
+      <header className="py-4 bg-black border-b border-white/20 sticky top-0 z-50">
+        <div className="container mx-auto px-4 max-w-5xl flex justify-between items-center">
+          <div className="text-xl font-bold">nonext</div>
+          <nav>
+            <ul className="flex space-x-4">
+              <li><a href="javascript:void(0)" onClick={() => scrollToSection('services')} className="text-sm text-gray-400 hover:text-white transition-colors">Services</a></li>
+              <li><a href="javascript:void(0)" onClick={() => scrollToSection('projects')} className="text-sm text-gray-400 hover:text-white transition-colors">Projects</a></li>
+              <li><a href="javascript:void(0)" onClick={() => scrollToSection('team')} className="text-sm text-gray-400 hover:text-white transition-colors">Team</a></li>
+              <li><a href="javascript:void(0)" onClick={() => scrollToSection('contact')} className="text-sm text-gray-400 hover:text-white transition-colors">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    )
+  }
 
 export default function Component() {
     const [activeService, setActiveService] = useState("design")
@@ -125,18 +151,20 @@ export default function Component() {
 
     return (
         <div className="bg-black text-white">
+            <Header />
             <HeroSection />
             <AboutUsSection />
             <ServicesSection services={services} activeService={activeService} setActiveService={setActiveService} />
             <ProcessSection processSteps={processSteps} processRef={processRef} processControls={processControls} />
             <ProjectsSection projects={projects} activeProject={activeProject} nextProject={nextProject} prevProject={prevProject} projectRef={projectRef} controls={controls} setActiveProject={setActiveProject} />
             <TeamSection teamMembers={teamMembers} expandedMember={expandedMember} toggleMember={toggleMember} />
+            <Customers />
             <FAQSection />
             <ContactSection />
             <Footer />
         </div>
     )
-}
+} 
 
 function HeroSection() {
     return (
@@ -184,7 +212,7 @@ function HeroSection() {
                             >
                                 Projekt starten
                             </Button>
-                        </motion.div> 
+                        </motion.div>
                     </motion.div>
 
                     <div className="relative">
@@ -206,7 +234,7 @@ function HeroSection() {
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.8 }}
                         >
-                            <div className="bg-black rounded-full p-4 backdrop-blur-sm overflow-hidden aspect-square w-150 h-150 border border-gray-800">
+                            <div className="bg-black rounded-full p-4 backdrop-blur-sm overflow-hidden aspect-square w-150 h-150 border border-white/20">
                                 <Canvas className="rounded-full">
                                     <SpinningPyramid />
                                 </Canvas>
@@ -267,7 +295,7 @@ function AboutUsCard({ icon, title, description, delay, glowColor }) {
             transition={{ duration: 0.5, delay }}
             className="flex flex-col items-center text-center"
         >
-            <div className="bg-black rounded-full p-4 mb-4 border border-gray-800" style={{ boxShadow: `0 0 15px ${glowColor}` }}>
+            <div className="bg-black rounded-full p-4 mb-4 border border-white/20" style={{ boxShadow: `0 0 15px ${glowColor}` }}>
                 {icon}
             </div>
             <h3 className="text-xl font-semibold mb-2">{title}</h3>
@@ -280,10 +308,10 @@ function ServicesSection({ services, activeService, setActiveService }) {
     return (
         <section id="services" className="py-20 sm:py-16 relative z-10 bg-black text-white">
             <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-4 max-w-5xl">
+                initial={{ opacity: 0, x: -50 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8 }}
+                className="container mx-auto px-4 max-w-5xl">
                 <h2 className="text-3xl font-bold mb-10 text-center">Unsere Dienstleistungen</h2>
                 <Tabs value={activeService} onValueChange={setActiveService} className="w-full">
                     <TabsList className="grid bg-black grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-4">
@@ -300,7 +328,7 @@ function ServicesSection({ services, activeService, setActiveService }) {
                     </TabsList>
                     {services.map((service) => (
                         <TabsContent key={service.id} value={service.id} className="mt-44 sm:mt-32 lg:mt-12">
-                            <Card className="bg-black border-gray-800">
+                            <Card className="bg-black border-white/20">
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
                                     <p className="text-gray-400 mb-4">{service.description}</p>
@@ -337,7 +365,7 @@ function ProcessSection({ processSteps, processRef, processControls }) {
                                 visible: { opacity: 1, y: 0, transition: { delay: index * 0.2 } },
                                 hidden: { opacity: 0, y: 50 }
                             }}
-                            className="bg-black rounded-lg p-4 backdrop-blur-sm border border-gray-800"
+                            className="bg-black rounded-lg p-4 backdrop-blur-sm border border-white/20"
                         >
                             <div className="flex items-center justify-center mb-3">
                                 <div className="bg-black rounded-full p-4">
@@ -386,10 +414,12 @@ function ProjectsSection({ projects, activeProject, nextProject, prevProject, pr
                                                     </Badge>
                                                 ))}
                                             </div>
-                                            <Button variant="outline" size="sm" className="text-black hover:border-gray-700 border-2 hover:bg-black hover:text-white">
-                                                Projekt ansehen
-                                                <ExternalLink className="ml-2 h-3 w-3" />
-                                            </Button>
+                                            <a href={project.link} target="_blank">
+                                                <Button variant="outline" size="sm" className="text-black hover:border-gray-700 border-2 hover:bg-black hover:text-white">
+                                                    Projekt ansehen
+                                                    <ExternalLink className="ml-2 h-3 w-3" />
+                                                </Button>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
@@ -427,23 +457,23 @@ function ProjectsSection({ projects, activeProject, nextProject, prevProject, pr
             </div>
         </section>
     )
-} 
+}
 
 function TeamSection({ teamMembers, expandedMember, toggleMember }) {
     return (
         <section id="team" className="py-16 relative z-10 bg-black">
             <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-4 max-w-5xl">
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="container mx-auto px-4 max-w-5xl">
                 <h2 className="text-3xl font-bold mb-10 text-center">Das Duo hinter der Magie</h2>
                 <div className="space-y-6">
                     {teamMembers.map((member, index) => (
-                        <div key={index} className="border-b border-gray-800 pb-6">
+                        <div key={index} className="border-b border-white/20 pb-6">
                             <div className="flex items-center justify-between cursor-pointer" onClick={() => toggleMember(index)}>
                                 <div className="flex items-center space-x-3">
-                                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-700">
+                                    <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
                                         <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
                                     </div>
                                     <div>
@@ -489,7 +519,7 @@ function TeamSection({ teamMembers, expandedMember, toggleMember }) {
                                                 </div>
                                                 <div className="mb-3">
                                                     <h4 className="text-sm font-semibold mb-2">Lieblingszitat</h4>
-                                                    <blockquote className="border-l-2 border-gray-700 pl-3 italic text-sm text-gray-400">
+                                                    <blockquote className="border-l-2 border-white/20 pl-3 italic text-sm text-gray-400">
                                                         "{member.quote}"
                                                     </blockquote>
                                                 </div>
@@ -546,25 +576,25 @@ function FAQSection() {
     return (
         <section id="faq" className="py-16 relative z-10 bg-black">
             <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="container mx-auto px-4 max-w-3xl">
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                className="container mx-auto px-4 max-w-3xl">
                 <h2 className="text-3xl font-bold mb-10 text-center">Häufig gestellte Fragen</h2>
                 <Accordion type="single" collapsible className="w-full">
-                    <AccordionItem value="item-1" className="border-b border-gray-800">
+                    <AccordionItem value="item-1" className="border-b border-white/20">
                         <AccordionTrigger className="text-sm">Auf welche Technologien spezialisieren Sie sich?</AccordionTrigger>
                         <AccordionContent className="text-sm text-gray-400">
                             Wir spezialisieren uns auf moderne Webtechnologien wie React, Next.js, Node.js und GraphQL. Unsere Expertise umfasst sowohl Frontend- als auch Backend-Entwicklung, was es uns ermöglicht, Full-Stack-Anwendungen zu erstellen, die robust, skalierbar und benutzerfreundlich sind.
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-2" className="border-b border-gray-800">
+                    <AccordionItem value="item-2" className="border-b border-white/20">
                         <AccordionTrigger className="text-sm">Wie lange dauert ein typisches Projekt?</AccordionTrigger>
                         <AccordionContent className="text-sm text-gray-400">
                             Die Projektdauer variiert je nach Komplexität und Umfang der Arbeit. Eine einfache Website kann 4-6 Wochen dauern, während eine komplexere Webanwendung 3-6 Monate in Anspruch nehmen kann. Wir stellen Ihnen nach unserer ersten Beratung und Projektplanung eine detaillierte Zeitschätzung zur Verfügung.
                         </AccordionContent>
                     </AccordionItem>
-                    <AccordionItem value="item-3" className="border-b border-gray-800">
+                    <AccordionItem value="item-3" className="border-b border-white/20">
                         <AccordionTrigger className="text-sm">Bieten Sie laufende Unterstützung und Wartung an?</AccordionTrigger>
                         <AccordionContent className="text-sm text-gray-400">
                             Ja, wir bieten verschiedene Support- und Wartungspakete an, um Ihre Website oder Anwendung reibungslos am Laufen zu halten. Diese können regelmäßige Updates, Sicherheitspatches, Leistungsoptimierung und technischen Support umfassen. Wir arbeiten mit Ihnen zusammen, um einen Supportplan zu erstellen, der Ihren spezifischen Bedürfnissen entspricht.
@@ -582,9 +612,16 @@ function ContactSection() {
             <div className="container mx-auto px-4 text-center max-w-3xl">
                 <h2 className="text-3xl font-bold mb-4">Bereit, Ihr Projekt zu starten?</h2>
                 <p className="text-base mb-8 text-gray-400">Lassen Sie uns Ihre Ideen Wirklichkeit werden. Kontaktieren Sie uns noch heute.</p>
-                <Button size="sm" className="bg-white text-black hover:bg-gray-200">
-                    Kontaktieren Sie uns
-                </Button>
+                <div className="flex justify-center space-x-8">
+                    <a href="mailto:info@nonext.io" className="flex items-center text-white hover:text-gray-300 transition-colors">
+                        <Mail className="w-6 h-6 mr-2" />
+                        <span>info@nonext.io</span>
+                    </a>
+                    <a href="https://www.instagram.com/nonext.io" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300 transition-colors">
+                        <Instagram className="w-6 h-6 mr-2" />
+                        <span>@nonext.io</span>
+                    </a>
+                </div>
             </div>
         </section>
     )
@@ -592,14 +629,12 @@ function ContactSection() {
 
 function Footer() {
     return (
-        <footer className="py-8 bg-black border-t border-gray-800">
+        <footer className="py-8 bg-black border-t border-white/20">
             <div className="container mx-auto px-4 max-w-5xl">
                 <div className="flex flex-col md:flex-row justify-between items-center">
                     <div className="text-xl font-bold mb-4 md:mb-0">nonext</div>
-                    <div className="flex space-x-4">
-                        <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">Twitter</a>
-                        <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">GitHub</a>
-                        <a href="#" className="text-sm text-gray-400 hover:text-white transition-colors">LinkedIn</a>
+                    <div className="flex space-x-4"> 
+                        <a href="https://instagram.com/nonext.io" target="_blank" className="text-sm text-gray-400 hover:text-white transition-colors">Instagram</a> 
                     </div>
                 </div>
                 <div className="mt-6 text-center text-gray-400 text-xs">
