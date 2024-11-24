@@ -56,6 +56,7 @@ export default function ProjectsSection({ projects, activeProject, nextProject, 
                             ))}
                         </div>
                         <Button
+                            aria-label="Vorheriges Projekt"
                             size="icon"
                             className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-transparent hover:bg-transparent"
                             onClick={prevProject}
@@ -63,6 +64,7 @@ export default function ProjectsSection({ projects, activeProject, nextProject, 
                             <ChevronLeft className="h-6 w-6" />
                         </Button>
                         <Button
+                            aria-label="Nächstes Projekt"
                             size="icon"
                             className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-transparent hover:bg-transparent"
                             onClick={nextProject}
@@ -73,6 +75,8 @@ export default function ProjectsSection({ projects, activeProject, nextProject, 
                     <div className="flex justify-center mt-6">
                         {projects.map((_, index) => (
                             <Button
+                            aria-label={`Gehe zu Projekt ${index + 1}`} 
+                            aria-current={index === activeProject ? "page" : undefined} 
                                 key={index}
                                 variant="ghost"
                                 size="sm"
