@@ -1,44 +1,46 @@
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import CustomCursor from '@/components/custom-cursor'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
+import dynamic from 'next/dynamic';
 
-const inter = Inter({ subsets: ['latin'] })
+const CustomCursor = dynamic(() => import('@/components/custom-cursor'), { ssr: false });
+
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://nonext.io'),
   title: {
-    default: 'nonext | Modern Web Development',
-    template: '%s | nonext'
+    default: 'nonext | Moderne Webentwicklung',
+    template: '%s | nonext',
   },
-  description: 'nonext creates modern, unique websites with cutting-edge technologies and stunning designs.',
-  keywords: ['web development', 'modern websites', 'React', 'Next.js', '3D web design'],
+  description: 'nonext erstellt moderne, einzigartige Websites mit modernster Technologie und beeindruckendem Design.',
+  keywords: ['Webentwicklung', 'moderne Websites', 'React', 'Next.js', '3D-Webdesign'],
   authors: [{ name: 'Michael Prietl' }, { name: 'Noel Hermann' }],
   creator: 'nonext Team',
   openGraph: {
     type: 'website',
-    locale: 'en_US',
+    locale: 'de_DE',
     url: 'https://nonext.io',
     siteName: 'nonext',
-    title: 'nonext | Modern Web Development',
-    description: 'Crafting the future of web experiences with innovative designs and technologies.',
+    title: 'nonext | Moderne Webentwicklung',
+    description: 'Die Zukunft von Web-Erlebnissen mit innovativem Design und Technologie gestalten.',
     images: [
       {
-        url: 'https://nonext.com/og-image.png',
+        url: 'https://nonext.io/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'nonext - Modern Web Development'
-      }
-    ]
+        alt: 'nonext - Moderne Webentwicklung',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'nonext | Modern Web Development',
-    description: 'Crafting the future of web experiences with innovative designs and technologies.',
+    title: 'nonext | Moderne Webentwicklung',
+    description: 'Die Zukunft von Web-Erlebnissen mit innovativem Design und Technologie gestalten.',
     creator: '@nonext',
-    images: ['https://nonext.com/og-image.png']
+    images: ['https://nonext.io/og-image.png'],
   },
   robots: {
     index: true,
@@ -51,7 +53,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-}
+};
 
 export default function RootLayout({
   children,
@@ -59,7 +61,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.className}>
+    <html lang="de" dir="ltr" className={inter.className}>
       <head>
         <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -67,39 +69,43 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="nonext.io" />
         <link rel="manifest" href="/site.webmanifest" />
+
+        <meta name="theme-color" content="#000000" />
+        <meta name="application-name" content="nonext.io" />
+        <meta property="og:locale" content="de_DE" />
+
+        <link rel="alternate" hrefLang="de" href="https://nonext.io/" />
+        <link rel="alternate" hrefLang="de" href="https://www.nonext.io/" />
       </head>
       <body>
         <header>
-          {/* Add your header content here */}
         </header>
-        <main>
+        <main aria-label="Main content">
           {children}
           <CustomCursor />
-          <SpeedInsights/>
-          <Analytics/>
-        </main>
+          <SpeedInsights />
+          <Analytics />
+        </main> 
         <footer>
-          {/* Add your footer content here */}
         </footer>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "WebSite",
-              "name": "nonext",
-              "url": "https://nonext.io",
-              "potentialAction": {
-                "@type": "SearchAction",
-                "target": {
-                  "@type": "EntryPoint",
-                  "urlTemplate": "https://nonext.io/search?q={search_term_string}"
-                },
-                "query-input": "required name=search_term_string"
-              }
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://nonext.io"
+                }
+              ]
             })
           }}
         />
+
       </body>
     </html>
   )
