@@ -12,13 +12,13 @@ export default function Header() {
     <header className="py-4 bg-black border-b border-white/20 sticky top-0 z-50">
       <div className="container mx-auto px-4 max-w-5xl flex justify-between items-center">
         {/* Logo */}
-        <div className="flex items-center">
+        <div className="flex items-center cursor-pointer p-1 px-2" onClick={() => scrollToSection("main-content")}>
           <Image
-            src="/logo.webp" 
+            src="/logo.webp"
             alt="Nonext Logo"
-            width={100} 
+            width={100}
             height={100}
-            priority 
+            priority
             draggable={false}
             className="select-none"
           />

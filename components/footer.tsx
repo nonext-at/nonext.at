@@ -8,9 +8,9 @@ export default function Footer() {
                     {/* Logo */}
                     <div className="mb-4 md:mb-0">
                         <Image
-                            src="/logo.webp" 
+                            src="/logo.webp"
                             alt="Nonext Logo"
-                            width={120} 
+                            width={120}
                             height={120}
                             draggable={false}
                             className="select-none"
@@ -34,6 +34,9 @@ export default function Footer() {
                 <div className="mt-6 text-center text-gray-400 text-xs">
                     © 2024 nonext. Alle Rechte vorbehalten.
                 </div>
+                <p className="text-xs mt-3 ml-4 text-center text-gray-400">
+                    Made with 🤍 by <a href="https://www.nonext.io" target="_blank" className="text-gray-300 font-semibold">nonext.io</a>
+                </p>
             </div>
         </footer>
     );
