@@ -92,7 +92,7 @@ export default function NichtGefunden() {
                         transition={{ duration: 0.5, delay: 0.4 }}
                     >
                         <motion.span
-                            className="mr-[-20px]"
+                            className="mr-[-20px] select-none"
                             animate={{
                                 y: [-9.85, 6.5, -9.85],
                             }}
@@ -106,7 +106,7 @@ export default function NichtGefunden() {
                         </motion.span>
                         <div className="relative w-[300px] h-[300px] mx-[-20px]">
                             <motion.span
-                                className="absolute left-1/3 text-[180px]"
+                                className="absolute left-1/3 text-[180px] select-none"
                                 animate={{
                                     y: [-7.8, 8.4, -7.8], // Astronaut's animation
                                 }}
@@ -137,13 +137,13 @@ export default function NichtGefunden() {
                                     height={300}
                                     objectFit="contain"
                                     sizes="300px"
-                                    style={{ width: '100%', height: '100%' }}
+                                    style={{ width: '100%', height: '100%', userSelect: 'none' }}
                                 />
                             </motion.div>
                         </div>
 
                         <motion.span
-                            className="ml-[-20px]"
+                            className="ml-[-20px] select-none"
                             animate={{
                                 y: [-6.2, 6.7, -6.2],
                             }}
