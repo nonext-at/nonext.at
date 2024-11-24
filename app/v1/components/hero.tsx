@@ -1,7 +1,7 @@
 import { motion, useAnimation } from "framer-motion"
 import { useEffect, useRef, useState } from "react"
-import { Button } from "./ui/button"
-import PyramidScene from "@/components/pyramid-scene"
+import { Button } from "@/components/ui/button"
+import PyramidScene from "./pyramid-scene"
 import { Canvas } from "@react-three/fiber"
 import { FaChevronDown } from "react-icons/fa"
 
