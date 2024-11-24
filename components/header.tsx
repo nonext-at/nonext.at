@@ -32,7 +32,7 @@ export default function Header() {
                 onClick={() => scrollToSection("services")}
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
-                Services
+                Dienstleistung
               </button>
             </li>
             <li>
@@ -40,7 +40,7 @@ export default function Header() {
                 onClick={() => scrollToSection("projects")}
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
-                Projects
+                Projekte
               </button>
             </li>
             <li>
@@ -56,7 +56,7 @@ export default function Header() {
                 onClick={() => scrollToSection("contact")}
                 className="text-sm text-gray-400 hover:text-white transition-colors"
               >
-                Contact
+                Kontakt
               </button>
             </li>
           </ul>
