@@ -26,7 +26,7 @@ export default function ServicesSection({ services, activeService, setActiveServ
                         ))}
                     </TabsList>
                     {services.map((service) => (
-                        <TabsContent key={service.id} value={service.id} className="mt-44 sm:mt-32 lg:mt-2">
+                        <TabsContent key={service.id} value={service.id} className="mt-10 sm:mt-15 lg:mt-2">
                             <Card className="bg-black border-white/20">
                                 <CardContent className="p-6">
                                     <h3 className="text-xl font-semibold mb-2 text-white">{service.title}</h3>
