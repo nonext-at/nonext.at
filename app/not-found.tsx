@@ -69,7 +69,7 @@ export default function NichtGefunden() {
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
-                    className="text-2xl mb-4"
+                    className="text-2xl mb-4 max-w-72 mx-auto text-center sm:max-w-none"
                 >
                     Ups! Dir ist der Sauerstoff ausgegangen.
                 </motion.h1>
