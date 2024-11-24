@@ -5,7 +5,7 @@ const Component = () => {
     return (
         <section id="customers" className="py-20 px-4 bg-black text-white overflow-hidden">
             <div className="max-w-5xl mx-auto">
-                <h2 className="text-4xl font-bold mb-12 text-center">Unsere Kunden</h2> 
+                <h2 className="text-4xl font-bold mb-12 text-center">Unsere Kunden</h2>
                 <Slider
                     width="400px"
                     duration={20}
@@ -14,20 +14,56 @@ const Component = () => {
                     blurBorderColor={'#000'}
                 >
                     <Slider.Slide>
-                        <Image draggable={false} className='select-none' src="/spoe.png" alt="any" width={144} height={144} />
+                        <Image
+                            priority={true}
+                            draggable={false}
+                            className="select-none"
+                            src="/carousel/spoe.webp"
+                            alt="any"
+                            width={100}
+                            height={100}
+                            style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                        />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false} className='select-none scale-95' src="/fraenkis.png" alt="any2" width={144} height={144} />
+                        <Image
+                            priority={true}
+                            draggable={false}
+                            className="select-none scale-95"
+                            src="/carousel/fraenkis.webp"
+                            alt="any2"
+                            width={100}
+                            height={100}
+                            style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                        />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false}className='select-none scale-125' src="/reality-break.png" alt="any" width={144} height={144} />
+                        <Image
+                            priority={true}
+                            draggable={false}
+                            className="select-none scale-125"
+                            src="/carousel/reality-break.webp"
+                            alt="any"
+                            width={100}
+                            height={100}
+                            style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                        />
                     </Slider.Slide>
                     <Slider.Slide>
-                        <Image draggable={false} className='select-none scale-150' src="/logo_white_transparent.png" alt="any2" width={144} height={144} />
+                        <Image
+                            priority={true}
+                            draggable={false}
+                            className="select-none scale-150"
+                            src="/carousel/nonext.webp"
+                            alt="any2"
+                            width={100}
+                            height={100}
+                            style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                        />
                     </Slider.Slide>
                 </Slider>
-            </div> 
-        </section> 
+            </div>
+        </section>
     );
 };
 

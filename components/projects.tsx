@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image"; // Import the Next.js Image component
 import { ExternalLink, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge"; // Import Badge from your UI components
@@ -23,7 +24,15 @@ export default function ProjectsSection({ projects, activeProject, nextProject, 
                                 <div key={index} className="w-full flex-shrink-0 px-12">
                                     <div className="flex flex-col lg:flex-row gap-6 items-center">
                                         <div className="lg:w-1/2">
-                                            <img src={project.image} alt={project.title} className="rounded-lg shadow-lg" />
+                                            <Image
+                                                draggable={false}
+                                                src={project.image}
+                                                alt={project.title}
+                                                priority={true}
+                                                className="select-none rounded-lg shadow-lg"
+                                                width={500}
+                                                height={300}
+                                            />
                                         </div>
                                         <div className="lg:w-1/2">
                                             <h3 className="text-2xl font-bold mb-2">{project.title}</h3>
@@ -77,5 +86,5 @@ export default function ProjectsSection({ projects, activeProject, nextProject, 
                 </motion.div>
             </div>
         </section>
-    )
+    );
 }

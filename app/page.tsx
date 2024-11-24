@@ -37,17 +37,16 @@ export default function Component() {
     ]
 
     const projects = [
-        { title: "Fränkis", description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.", image: "/projekte/Projekt2.png", link: "#", tech: ["React", "Node.js", "AWS", "TensorFlow"] },
-        { title: "Reality Break", description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.", image: "/projekte/Projekt3.webp", link: "#", tech: ["Vue.js", "Python", "MongoDB", "WebRTC"] },
-        { title: "EduTech-Ökosystem", description: "Ein umfassendes Lernmanagementsystem mit Gamification-Elementen.", image: "/placeholder.svg?height=400&width=600", link: "#", tech: ["React Native", "Firebase", "GraphQL", "Unity"] },
-        { title: "FinTech-Dashboard", description: "Echtzeit-Finanzdatenvisualisierung und prädiktive Analysen für Investoren.", image: "/placeholder.svg?height=400&width=600", link: "#", tech: ["Angular", "D3.js", "Django", "PostgreSQL"] },
+        { title: "Fränkis", description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.", image: "/projekte/fraenkis.webp", link: "https://fraenkis.nonext.io", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
+        { title: "Reality Break", description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.", image: "/projekte/realitybreak.webp", link: "https://reality-break.nonext.io", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
+        { title: "nonext", description: "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.", image: "/projekte/nonext.webp", link: "https://nonext.io", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase", "Three.js"] },
     ]
 
     const teamMembers = [
         {
             name: "Michael Prietl",
             role: "Frontend-Entwickler",
-            image: "/maikeru.jpg",
+            image: "/team/michael.webp",
             bio: "Michael ist ein leidenschaftlicher Frontend-Entwickler, der moderne Technologien mit ansprechendem Design verbindet. Mit Fokus auf React, TypeScript und Next.js schafft er intuitive Benutzeroberflächen, die sowohl funktional als auch ästhetisch überzeugen. Er liebt es, komplexe Probleme in einfache Lösungen zu übersetzen und legt besonderen Wert auf sauberen, wartbaren Code und exzellente Nutzererfahrungen.",
             skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
             funFacts: [
@@ -64,7 +63,7 @@ export default function Component() {
         {
             name: "Noel Hermann",
             role: "Frontend-Entwickler",
-            image: "/nohell.png",
+            image: "/team/noel.webp",
             bio: "Sam ist ein Backend-Zauberer, der robuste und skalierbare Systeme entwickelt, die komplexe Webanwendungen antreiben. Mit einem tiefen Verständnis für Datenbanken und serverseitige Technologien sorgt Sam dafür, dass unsere Projekte ein solides Fundament haben.",
             skills: ["Node.js", "Python", "MongoDB", "GraphQL", "Docker"],
             funFacts: [
