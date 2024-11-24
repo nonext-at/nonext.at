@@ -28,7 +28,7 @@ export default function ProjectsSection({ projects, activeProject, nextProject, 
                                                 draggable={false}
                                                 src={project.image}
                                                 alt={project.title}
-                                                priority={true}
+                                                loading="lazy"
                                                 className="select-none rounded-lg shadow-lg"
                                                 width={500}
                                                 height={300}

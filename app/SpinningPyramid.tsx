@@ -1,11 +1,12 @@
 "use client"
 
 import { useRef, useMemo } from "react"
-import { Canvas, useFrame, useThree, extend } from "@react-three/fiber"
-import { Float, Effects } from "@react-three/drei"
+import { useFrame, useThree } from "@react-three/fiber"
+import { Float } from "@react-three/drei"
 import { EffectComposer, Bloom } from "@react-three/postprocessing"
-import { Vector3, BufferGeometry, BufferAttribute, LineSegments, LineBasicMaterial, Points, PointsMaterial } from "three"
-import * as THREE from 'three'
+import { Vector3, BufferGeometry, BufferAttribute } from "three"
+/* import * as THREE from 'three' */
+import { MeshBasicMaterial, DoubleSide, EdgesGeometry, Group, Points } from 'three'
 
 function createPyramidGeometry() {
   const pyramidGeometry = new BufferGeometry()
@@ -44,15 +45,15 @@ function createPyramidGeometry() {
 
 function Pyramid() {
   const pyramidGeometry = useMemo(() => createPyramidGeometry(), [])
-  const faceMaterial = new THREE.MeshBasicMaterial({
+  const faceMaterial = new MeshBasicMaterial({
     color: 0x000000,
-    side: THREE.DoubleSide,
+    side: DoubleSide,
   })
 
   return (
     <group>
       <mesh geometry={pyramidGeometry} material={faceMaterial} />
-      <lineSegments geometry={new THREE.EdgesGeometry(pyramidGeometry)}>
+      <lineSegments geometry={new EdgesGeometry(pyramidGeometry)}>
         <lineBasicMaterial color={0xffffff} linewidth={2} />
       </lineSegments>
     </group>
@@ -98,7 +99,7 @@ function createCubeEdges() {
 }
 
 function FloatingCube({ position, index }: { position: [number, number, number], index: number }) {
-  const groupRef = useRef<THREE.Group>(null)
+  const groupRef = useRef<Group>(null)
   const initialPosition = useRef(new Vector3(...position))
 
   useFrame((state) => {
@@ -129,7 +130,7 @@ function FloatingCube({ position, index }: { position: [number, number, number],
 }
 
 function ParticleSystem() {
-  const particlesRef = useRef<THREE.Points>(null)
+  const particlesRef = useRef<Points>(null)
   const particleCount = 1000
 
   const positions = useMemo(() => {

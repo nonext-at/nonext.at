@@ -2,6 +2,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronUp, ChevronDown, Github, Linkedin, Mail, Globe, Coffee, Code, Zap } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
+import Image from 'next/image'
 
 export default function TeamSection({ teamMembers, expandedMember, toggleMember }) {
     return (
@@ -18,7 +19,14 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                             <div className="flex items-center justify-between cursor-pointer" onClick={() => toggleMember(index)}>
                                 <div className="flex items-center space-x-3">
                                     <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
-                                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                                    <Image
+                                        src={member.image}
+                                        alt={member.name}
+                                        width={48} 
+                                        height={48} 
+                                        className="object-cover"
+                                        priority={true} 
+                                    />
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-semibold">{member.name}</h3>
