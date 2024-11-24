@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronUp, ChevronDown, Github, Linkedin, Mail, Globe, Coffee, Code, Zap } from "lucide-react";
+import { ChevronUp, ChevronDown, Github, Linkedin, Mail, Globe, Coffee, Code, Zap, Instagram } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Image from 'next/image'
@@ -19,21 +19,21 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                             <div className="flex items-center justify-between cursor-pointer" onClick={() => toggleMember(index)}>
                                 <div className="flex items-center space-x-3">
                                     <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
-                                    <Image
-                                        src={member.image}
-                                        alt={member.name}
-                                        width={48} 
-                                        height={48} 
-                                        className="object-cover"
-                                        priority={true} 
-                                    />
+                                        <Image
+                                            src={member.image}
+                                            alt={member.name}
+                                            width={48}
+                                            height={48}
+                                            className="object-cover"
+                                            priority={true}
+                                        />
                                     </div>
                                     <div>
                                         <h3 className="text-lg font-semibold">{member.name}</h3>
                                         <p className="text-sm text-gray-400">{member.role}</p>
                                     </div>
                                 </div>
-                                <Button variant="ghost" size="sm">
+                                <Button variant="ghost" size="sm" aria-label="Personen Details umschalten">
                                     {expandedMember === index ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
                                 </Button>
                             </div>
@@ -78,6 +78,9 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                                                 <div>
                                                     <h4 className="text-sm font-semibold mb-2">Verbinden</h4>
                                                     <div className="flex space-x-3">
+                                                        <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                                            <Instagram size={18} />
+                                                        </a>
                                                         <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                                             <Github size={18} />
                                                         </a>

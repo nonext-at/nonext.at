@@ -80,7 +80,7 @@ export default function RootLayout({
       <body>
         <header>
         </header>
-        <main aria-label="Main content">
+        <main id="main-content" aria-label="Main content">
           {children}
           <CustomCursor />
           <SpeedInsights />

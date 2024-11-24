@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 
 export default function HeroSection() {
+    const scrollToSection = (sectionId) => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
+    };
     return (
         <section className="relative z-10 py-16">
             <div className="container mx-auto px-4 max-w-5xl">
@@ -45,7 +51,7 @@ export default function HeroSection() {
                         <motion.div className="flex justify-center md:justify-start">
                             <Button
                                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white hover:from-blue-600 hover:to-purple-700 transition-all duration-300 text-sm px-6 py-3 rounded-full shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
-                                onClick={() => { }}
+                                onClick={() => { scrollToSection("contact") }}
                             >
                                 Projekt starten
                             </Button>
