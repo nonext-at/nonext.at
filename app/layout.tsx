@@ -12,26 +12,26 @@ const inter = Inter({ subsets: ['latin'], display: 'swap' });
 export const metadata: Metadata = {
   metadataBase: new URL('https://nonext.at'),
   title: {
-    default: 'nonext | Moderne Webentwicklung',
+    default: 'nonext | Kreative Webentwicklung und Webdesign in Vorarlberg',
     template: '%s | nonext',
   },
-  description: 'nonext erstellt moderne, einzigartige Websites mit modernster Technologie und beeindruckendem Design.',
-  keywords: ['Webentwicklung', 'moderne Websites', 'React', 'Next.js', '3D-Webdesign'],
+  "description": "nonext in Vorarlberg erstellt moderne Websites und Webapps mit innovativem Design. Starte dein Projekt noch heute mit unserem Team!",
+  keywords: ['Webentwicklung', 'Webdesign Vorarlberg', 'moderne Websites', 'React', 'Next.js', 'SEO Optimierung', 'digitale Transformation Vorarlberg'],
   authors: [{ name: 'Michael Prietl' }, { name: 'Noel Hermann' }],
   creator: 'nonext Team',
   openGraph: {
     type: 'website',
-    locale: 'de_DE',
+    locale: 'de_AT',
     url: 'https://nonext.at',
     siteName: 'nonext',
-    title: 'nonext | Kreative Webentwicklung | Starte dein Projekt heute!',
-    description: 'Wir gestalten außergewöhnliche digitale Erlebnisse durch innovative Designs und modernste Entwicklung.',
+    title: 'nonext | Kreative Websites für Vorarlberg',
+    description: 'Deine Webagentur für innovative und maßgeschneiderte Websites in Vorarlberg. Jetzt Kontakt aufnehmen!',
     images: [
       {
         url: 'https://nonext.at/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'nonext - Kreative Webentwicklung',
+        alt: 'nonext - Kreative Webentwicklung aus Vorarlberg',
       },
     ],
   },
@@ -72,7 +72,7 @@ export default function RootLayout({
 
         <meta name="theme-color" content="#000000" />
         <meta name="application-name" content="nonext.at" />
-        <meta property="og:locale" content="de_DE" />
+        <meta property="og:locale" content="de_AT" />
 
         <link rel="alternate" hrefLang="de" href="https://nonext.at/" />
         <link rel="alternate" hrefLang="de" href="https://www.nonext.at/" />
@@ -91,20 +91,51 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://nonext.at"
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://nonext.at"
+                  }
+                ]
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                "name": "nonext",
+                "url": "https://nonext.at",
+                "logo": "https://nonext.at/logo.png",
+                "contactPoint": {
+                  "@type": "ContactPoint",
+                  "telephone": "+4369918357220",
+                  "email": "info@nonext.at",
+                  "contactType": "Customer Service",
+                  "areaServed": "AT",
+                  "availableLanguage": "German"
+                },
+                "sameAs": [
+                  "https://www.facebook.com/nonext",
+                  "https://www.instagram.com/nonext.at",
+                  "https://www.linkedin.com/company/nonext"
+                ],
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Landstrasse 33",
+                  "addressLocality": "Höchst",
+                  "addressRegion": "Vorarlberg",
+                  "postalCode": "6973",
+                  "addressCountry": "AT"
                 }
-              ]
-            })
+              }
+            ])
           }}
         />
+
 
       </body>
     </html>
