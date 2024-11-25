@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronUp, ChevronDown, Github, Linkedin, Mail, Globe, Coffee, Code, Zap, Instagram } from "lucide-react";
+import { ChevronUp, ChevronDown, Github, Linkedin, Mail, Globe, Coffee, Code, Zap, Instagram, ExternalLink } from "lucide-react";
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 import Image from 'next/image'
@@ -51,13 +51,18 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                                                 <p className="text-sm text-gray-400 mb-3">{member.bio}</p>
                                                 <div className="mb-3">
                                                     <h4 className="text-sm font-semibold mb-2">Expertise</h4>
-                                                    <div className="flex flex-wrap gap-2">
+                                                    <div className="flex flex-wrap gap-2 mb-4">
                                                         {member.skills.map((skill, skillIndex) => (
                                                             <Badge key={skillIndex} variant="secondary" className="bg-white/10 text-gray-400 hover:text-gray-100 hover:bg-white/20 text-xs">
                                                                 {skill}
                                                             </Badge>
                                                         ))}
                                                     </div>
+                                                    <div className="flex items-center text-gray-400 hover:underline hover:cursor-pointer text-sm">
+                                                        <a className="">Erfahre mehr</a>
+                                                        <ExternalLink className="ml-1 h-3 w-3" />
+                                                    </div>
+
                                                 </div>
                                             </div>
                                             <div>
