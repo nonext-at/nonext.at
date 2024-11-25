@@ -16,7 +16,17 @@ export const metadata: Metadata = {
     template: '%s | nonext',
   },
   "description": "nonext in Vorarlberg erstellt moderne Websites und Webapps mit innovativem Design. Starte dein Projekt noch heute mit unserem Team!",
-  keywords: ['Webentwicklung', 'Webdesign Vorarlberg', 'moderne Websites', 'React', 'Next.js', 'SEO Optimierung', 'digitale Transformation Vorarlberg'],
+  keywords: [
+    'Webentwicklung',
+    'Webdesign Vorarlberg',
+    'moderne Websites',
+    'React',
+    'Next.js',
+    'SEO Optimierung',
+    'digitale Transformation Vorarlberg',
+    'Projekte',
+    'Team',
+  ],
   authors: [{ name: 'Michael Prietl' }, { name: 'Noel Hermann' }],
   creator: 'nonext Team',
   openGraph: {
@@ -53,6 +63,12 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  alternates: {
+    canonical: 'https://nonext.at',
+    languages: {
+      'de': 'https://nonext.at'
+    },
+  },
 };
 
 export default function RootLayout({
@@ -76,18 +92,7 @@ export default function RootLayout({
 
         <link rel="alternate" hrefLang="de" href="https://nonext.at/" />
         <link rel="alternate" hrefLang="de" href="https://www.nonext.at/" />
-      </head>
-      <body>
-        <header>
-        </header>
-        <main id="main-content" aria-label="Main content">
-          {children}
-          <CustomCursor />
-          <SpeedInsights />
-          <Analytics />
-        </main> 
-        <footer>
-        </footer>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -100,9 +105,21 @@ export default function RootLayout({
                     "@type": "ListItem",
                     "position": 1,
                     "name": "Home",
-                    "item": "https://nonext.at"
-                  }
-                ]
+                    "item": "https://nonext.at",
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Projekte",
+                    "item": "https://nonext.at/projects",
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Team",
+                    "item": "https://nonext.at/team",
+                  },
+                ],
               },
               {
                 "@context": "https://schema.org",
@@ -116,12 +133,12 @@ export default function RootLayout({
                   "email": "info@nonext.at",
                   "contactType": "Customer Service",
                   "areaServed": "AT",
-                  "availableLanguage": "German"
+                  "availableLanguage": "German",
                 },
                 "sameAs": [
                   "https://www.facebook.com/nonext",
                   "https://www.instagram.com/nonext.at",
-                  "https://www.linkedin.com/company/nonext"
+                  "https://www.linkedin.com/company/nonext-at",
                 ],
                 "address": {
                   "@type": "PostalAddress",
@@ -129,14 +146,24 @@ export default function RootLayout({
                   "addressLocality": "Höchst",
                   "addressRegion": "Vorarlberg",
                   "postalCode": "6973",
-                  "addressCountry": "AT"
-                }
-              }
-            ])
+                  "addressCountry": "AT",
+                },
+              },
+            ]),
           }}
         />
-
-
+      </head>
+      <body>
+        <header>
+        </header>
+        <main id="main-content" aria-label="Main content">
+          {children}
+          <CustomCursor />
+          <SpeedInsights />
+          <Analytics />
+        </main>
+        <footer>
+        </footer>
       </body>
     </html>
   )
