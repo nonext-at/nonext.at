@@ -56,7 +56,7 @@
         "name": "Noel Hermann",
         "role": "Gründer, Entwickler",
         "image": "/team/noel.webp", 
-        "bioShort": "Du hast noch nicht bezahlt",
+        "bioShort": "Noel kombiniert Design und Technik, sorgt für nahtlose Frontend-Backend-Integration und schafft benutzerfreundliche, leistungsstarke Anwendungen.",
         "bio": "Noel verbindet kreatives Design mit technischer Präzision und sorgt dafür, dass Frontend und Backend harmonisch zusammenarbeiten. Von der ersten Codezeile bis zur finalen Auslieferung stellt er sicher, dass unsere Anwendungen nicht nur leistungsstark, sondern auch benutzerfreundlich sind. Sein Anspruch ist es, Lösungen zu schaffen, die nicht nur gut aussehen, sondern auch reibungslos funktionieren – und das auf jeder Ebene.",
         "skills": ["React", "Next.js", "Node.js", "Datenbanken", "API", "UI/UX"],
         "funFacts": [
