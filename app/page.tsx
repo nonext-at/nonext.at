@@ -37,9 +37,9 @@ export default function Component() {
     ]
 
     const projects = [
-        { title: "Fränkis", description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.", image: "/projekte/fraenkis.webp", link: "https://fraenkis.nonext.io", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
-        { title: "Reality Break", description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.", image: "/projekte/realitybreak.webp", link: "https://reality-break.nonext.io", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
-        { title: "nonext", description: "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.", image: "/projekte/nonext.webp", link: "https://nonext.io", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase", "Three.js"] },
+        { title: "Fränkis", description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.", image: "/projekte/fraenkis.webp", link: "https://fraenkis.nonext.at", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
+        { title: "Reality Break", description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.", image: "/projekte/realitybreak.webp", link: "https://reality-break.nonext.at", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
+        { title: "nonext", description: "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.", image: "/projekte/nonext.webp", link: "https://nonext.at", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase", "Three.js"] },
     ]
 
     const teamMembers = [
@@ -58,8 +58,8 @@ export default function Component() {
             instagram: "https://www.instagram.com/maikeru.jpg/",
             github: "https://github.com/MaikeruDev",
             linkedin: "https://www.linkedin.com/in/michael-prietl-93a6b625b/",
-            email: "mp@nonext.io",
-            website: "https://michael.nonext.io",
+            email: "mp@nonext.at",
+            website: "https://michael.nonext.at",
         },
         {
             name: "Noel Hermann",
@@ -76,8 +76,8 @@ export default function Component() {
             instagram: "https://www.instagram.com/noel_her/",
             github: "https://github.com/FIEF-nohell",
             linkedin: "https://www.linkedin.com/in/noel-hermann-a9b925243/",
-            email: "nh@nonext.io",
-            website: "https://noel.nonext.io",
+            email: "nh@nonext.at",
+            website: "https://noel.nonext.at",
         }
     ]
 
