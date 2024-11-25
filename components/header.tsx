@@ -72,7 +72,7 @@ export default function Header() {
         <nav>
           <ul className="flex space-x-4">
             <li>
-              <a 
+              <a
                 className="text-sm text-gray-400 hover:text-white transition-colors underline underline-offset-4 cursor-pointer"
               >
                 Home Seite
@@ -93,7 +93,7 @@ export default function Header() {
               >
                 Projekte Seite
               </a>
-            </li> 
+            </li>
           </ul>
         </nav>
       </div>
