@@ -10,7 +10,7 @@ const CustomCursor = dynamic(() => import('@/components/custom-cursor'), { ssr: 
 const inter = Inter({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://nonext.io'),
+  metadataBase: new URL('https://nonext.at'),
   title: {
     default: 'nonext | Moderne Webentwicklung',
     template: '%s | nonext',
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'de_DE',
-    url: 'https://nonext.io',
+    url: 'https://nonext.at',
     siteName: 'nonext',
     title: 'nonext | Kreative Webentwicklung | Starte dein Projekt heute!',
     description: 'Wir gestalten außergewöhnliche digitale Erlebnisse durch innovative Designs und modernste Entwicklung.',
     images: [
       {
-        url: 'https://nonext.io/og-image.png',
+        url: 'https://nonext.at/og-image.png',
         width: 1200,
         height: 630,
         alt: 'nonext - Kreative Webentwicklung',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: 'nonext | Kreative Webentwicklung | Starte dein Projekt heute!',
     description: 'Die Zukunft von Web-Erlebnissen mit innovativem Design und Technologie gestalten.',
     creator: '@nonext',
-    images: ['https://nonext.io/og-image.png'],
+    images: ['https://nonext.at/og-image.png'],
   },
   robots: {
     index: true,
@@ -67,15 +67,15 @@ export default function RootLayout({
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <link rel="shortcut icon" href="/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <meta name="apple-mobile-web-app-title" content="nonext.io" />
+        <meta name="apple-mobile-web-app-title" content="nonext.at" />
         <link rel="manifest" href="/site.webmanifest" />
 
         <meta name="theme-color" content="#000000" />
-        <meta name="application-name" content="nonext.io" />
+        <meta name="application-name" content="nonext.at" />
         <meta property="og:locale" content="de_DE" />
 
-        <link rel="alternate" hrefLang="de" href="https://nonext.io/" />
-        <link rel="alternate" hrefLang="de" href="https://www.nonext.io/" />
+        <link rel="alternate" hrefLang="de" href="https://nonext.at/" />
+        <link rel="alternate" hrefLang="de" href="https://www.nonext.at/" />
       </head>
       <body>
         <header>
@@ -99,7 +99,7 @@ export default function RootLayout({
                   "@type": "ListItem",
                   "position": 1,
                   "name": "Home",
-                  "item": "https://nonext.io"
+                  "item": "https://nonext.at"
                 }
               ]
             })
