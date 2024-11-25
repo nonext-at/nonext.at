@@ -58,8 +58,8 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                                                             </Badge>
                                                         ))}
                                                     </div>
-                                                    <div className="flex items-center text-gray-400 hover:underline hover:cursor-pointer text-sm">
-                                                        <a className="">Erfahre mehr</a>
+                                                    <div className="flex items-center text-gray-400 text-sm">
+                                                        <a href={member.contact.website} className="hover:cursor-pointer hover:underline">Erfahre mehr</a>
                                                         <ExternalLink className="ml-1 h-3 w-3" />
                                                     </div>
 

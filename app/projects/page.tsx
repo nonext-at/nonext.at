@@ -9,8 +9,7 @@ import { Badge } from "@/components/ui/badge"
 import { Mountain, ExternalLink } from 'lucide-react'
 import projectsData from "@/data/projects.json"
 
-export default function ProjectsPage() {
-  const { scrollYProgress } = useScroll()
+export default function ProjectsPage() { 
   const projectsRef = useRef(null)
 
   function Header() {
@@ -43,7 +42,7 @@ export default function ProjectsPage() {
             </a>
 
             {/* Current Page Sections */}
-            <nav>
+            {/* <nav>
               <ul className="flex space-x-4">
                 <li>
                   <button
@@ -62,7 +61,7 @@ export default function ProjectsPage() {
                   </button>
                 </li>
               </ul>
-            </nav>
+            </nav> */}
           </div>
 
           <nav>

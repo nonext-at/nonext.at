@@ -148,7 +148,7 @@ export default function BlockPage() {
                 </motion.span>
               </h1>
               <p className="text-gray-300 text-base sm:text-lg mb-6 max-w-md mx-auto lg:mx-0">
-                {teamMember.bio}
+                {teamMember.bioShort}
               </p>
               <motion.div className="flex justify-center lg:justify-start">
                 <Button

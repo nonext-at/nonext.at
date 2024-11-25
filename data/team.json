@@ -3,15 +3,21 @@
         "slug": "michael-prietl",
         "name": "Michael Prietl",
         "role": "Gründer, Entwickler",
-        "image": "/team/michael.webp",
-        "heroImage": "/placeholder.svg?height=400&width=800",
-        "bio": "Michael – Frontend-Entwickler mit Leidenschaft für moderne Technologien. Mit React, TypeScript und Next.js gestaltet er intuitive, funktionale und ästhetische Benutzeroberflächen.",
+        "image": "/team/michael.webp", 
+        "bioShort": "Michael – Frontend-Entwickler mit Leidenschaft für moderne Technologien. Mit React, TypeScript und Next.js gestaltet er intuitive, funktionale und ästhetische Benutzeroberflächen.",
+        "bio": "Michael ist ein leidenschaftlicher Frontend-Entwickler, der moderne Technologien mit ansprechendem Design verbindet. Mit Fokus auf React, TypeScript und Next.js schafft er intuitive Benutzeroberflächen, die sowohl funktional als auch ästhetisch überzeugen. Er liebt es, komplexe Probleme in einfache Lösungen zu übersetzen und legt besonderen Wert auf sauberen, wartbaren Code und exzellente Nutzererfahrungen.",
         "skills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "UI/UX Design", "Performance Optimization", "Responsive Design", "State Management"],
+        "funFacts": [
+            "Kennt den Unterschied zwischen 'margin' und 'padding' blind",
+            "Schreibt eleganteren Code als seine eigene Handschrift",
+            "Hat ein Talent dafür, Bugs im Code in Rekordzeit zu finden"
+        ],
         "featuredProjects": [
             { "name": "Fränkis", "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub.", "image": "/projekte/fraenkis.webp", "link": "https://fraenkis.nonext.at" },
             { "name": "Reality Break", "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern.", "image": "/projekte/realitybreak.webp", "link": "https://reality-break.nonext.at" },
             { "name": "nonext", "description": "Eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert.", "image": "/projekte/nonext.webp", "link": "https://nonext.at" }
         ],
+        "quote": "Design ist nicht, wie es aussieht – Design ist, wie es funktioniert.",
         "expertiseAreas": [
             {
                 "title": "Frontend Development",
@@ -42,22 +48,28 @@
             "email": "mp@nonext.at",
             "github": "https://github.com/MaikeruDev",
             "linkedin": "https://www.linkedin.com/in/michael-prietl-93a6b625b/",
-            "website": "https://michael.nonext.at"
+            "website": "/team/michael-prietl"
         }
     },
     {
         "slug": "noel-hermann",
         "name": "Noel Hermann",
         "role": "Gründer, Entwickler",
-        "image": "/team/noel.webp",
-        "heroImage": "/placeholder.svg?height=400&width=800",
-        "bio": "Michael – Frontend-Entwickler mit Leidenschaft für moderne Technologien. Mit React, TypeScript und Next.js gestaltet er intuitive, funktionale und ästhetische Benutzeroberflächen.",
-        "skills": ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion", "UI/UX Design", "Performance Optimization", "Responsive Design", "State Management"],
+        "image": "/team/noel.webp", 
+        "bioShort": "Du hast noch nicht bezahlt",
+        "bio": "Noel verbindet kreatives Design mit technischer Präzision und sorgt dafür, dass Frontend und Backend harmonisch zusammenarbeiten. Von der ersten Codezeile bis zur finalen Auslieferung stellt er sicher, dass unsere Anwendungen nicht nur leistungsstark, sondern auch benutzerfreundlich sind. Sein Anspruch ist es, Lösungen zu schaffen, die nicht nur gut aussehen, sondern auch reibungslos funktionieren – und das auf jeder Ebene.",
+        "skills": ["React", "Next.js", "Node.js", "Datenbanken", "API", "UI/UX"],
+        "funFacts": [
+            "Hat schon mal aus Versehen ein Projekt in der Pause fertiggestellt",
+            "Träumt manchmal von einem Leben ohne Merge-Konflikte",
+            "Kann ein div zentrieren (manchmal)"
+        ],
         "featuredProjects": [
             { "name": "Fränkis", "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub.", "image": "/projekte/fraenkis.webp", "link": "https://fraenkis.nonext.at" },
             { "name": "Reality Break", "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern.", "image": "/projekte/realitybreak.webp", "link": "https://reality-break.nonext.at" },
             { "name": "nonext", "description": "Eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert.", "image": "/projekte/nonext.webp", "link": "https://nonext.at" }
         ],
+        "quote": "Ein Design ist dann perfekt, wenn man es nicht erklären, sondern nur fühlen kann.",
         "expertiseAreas": [
             {
                 "title": "Frontend Development",
@@ -85,10 +97,10 @@
             }
         ],
         "contact": {
-            "email": "mp@nonext.at",
-            "github": "https://github.com/MaikeruDev",
-            "linkedin": "https://www.linkedin.com/in/michael-prietl-93a6b625b/",
-            "website": "https://michael.nonext.at"
+            "email": "nh@nonext.at",
+            "github": "https://github.com/FIEF-nohell",
+            "linkedin": "https://www.linkedin.com/in/noel-hermann-a9b925243/",
+            "website": "/team/noel-hermann"
         }
     }
 ]

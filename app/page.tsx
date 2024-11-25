@@ -16,6 +16,9 @@ import FAQSection from "@/components/faq"
 import ContactSection from "@/components/contact"
 import Footer from "@/components/footer"
 
+import projectsData from "@/data/projects.json"
+import teamMembers from "@/data/team.json"
+
 export default function Component() {
     const [activeService, setActiveService] = useState("design")
     const [activeProject, setActiveProject] = useState(0)
@@ -34,15 +37,9 @@ export default function Component() {
         { id: "seo", icon: <Search className="h-6 w-6" />, title: "SEO & Analyse", description: "Implementierung von Strategien zur Verbesserung Ihrer Online-Sichtbarkeit und Bereitstellung von Erkenntnissen für datengesteuerte Entscheidungen.", features: ["Keyword-Recherche", "On-Page-SEO", "Technisches SEO", "Content-Strategie", "Analytics-Setup", "Conversion-Tracking"] },
         { id: "hosting", icon: <Server className="h-6 w-6" />, title: "Hosting & Bereitstellung", description: "Angebot sicherer, zuverlässiger und skalierbarer Hosting-Lösungen, um sicherzustellen, dass Ihre Webanwendungen immer verfügbar und leistungsfähig sind.", features: ["Cloud-Hosting", "Server-Konfiguration", "SSL-Zertifikate", "Automatisierte Backups", "Lastverteilung", "24/7-Überwachung"] },
         { id: "support", icon: <Users className="h-6 w-6" />, title: "Wartung & Support", description: "Bereitstellung technischer Unterstützung und regelmäßiger Updates, um Ihre  Produkte reibungslos und sicher am Laufen zu halten.", features: ["24/7-Support", "Sicherheitsupdates", "Überwachung", "Aktualisierungen", "Feature-Erweiterungen", "Schulung & Dokumentation"] },
-    ]
+    ] 
 
-    const projects = [
-        { title: "Fränkis", description: "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.", image: "/projekte/fraenkis.webp", link: "https://fraenkis.nonext.at", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
-        { title: "Reality Break", description: "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.", image: "/projekte/realitybreak.webp", link: "https://reality-break.nonext.at", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase"] },
-        { title: "nonext", description: "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.", image: "/projekte/nonext.webp", link: "https://nonext.at", tech: ["React", "Next.js", "motion", "shadcn", "Tailwind", "Firebase", "Three.js"] },
-    ]
-
-    const teamMembers = [
+    /* const teamMembers = [
         {
             name: "Michael Prietl",
             role: "Gründer, Entwickler",
@@ -79,7 +76,7 @@ export default function Component() {
             email: "nh@nonext.at",
             website: "https://noel.nonext.at",
         }
-    ]
+    ] */
 
     const processSteps = [
         {
@@ -117,11 +114,11 @@ export default function Component() {
     }, [isProcessInView, processControls])
 
     const nextProject = () => {
-        setActiveProject((prev) => (prev + 1) % projects.length)
+        setActiveProject((prev) => (prev + 1) % projectsData.length)
     }
 
     const prevProject = () => {
-        setActiveProject((prev) => (prev - 1 + projects.length) % projects.length)
+        setActiveProject((prev) => (prev - 1 + projectsData.length) % projectsData.length)
     }
 
     const toggleMember = (index: number) => {
@@ -135,7 +132,7 @@ export default function Component() {
             <AboutUsSection />
             <ServicesSection services={services} activeService={activeService} setActiveService={setActiveService} />
             <ProcessSection processSteps={processSteps} processRef={processRef} processControls={processControls} />
-            <ProjectsSection projects={projects} activeProject={activeProject} nextProject={nextProject} prevProject={prevProject} projectRef={projectRef} controls={controls} setActiveProject={setActiveProject} />
+            <ProjectsSection projects={projectsData} activeProject={activeProject} nextProject={nextProject} prevProject={prevProject} projectRef={projectRef} controls={controls} setActiveProject={setActiveProject} />
             <TeamSection teamMembers={teamMembers} expandedMember={expandedMember} toggleMember={toggleMember} />
             <Customers />
             <FAQSection />
