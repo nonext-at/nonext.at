@@ -58,7 +58,8 @@ export default function Header() {
         <div className="flex items-center space-x-6">
           {/* Logo */}
           <div
-            className="cursor-pointer p-1 px-2 flex items-center"
+            className="cursor-pointer p-1 px-2 flex items-center relative justify-center"
+            style={{ width: "100px", height: "30px" }}
             onClick={handleLogoClick}
           >
             <Image
