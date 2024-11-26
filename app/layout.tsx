@@ -4,6 +4,9 @@ import './globals.css'
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from "@vercel/analytics/react"
 import dynamic from 'next/dynamic';
+import Header from '@/components/header'
+import { SectionProvider } from './SectionContext';
+import Footer from '@/components/footer'
 
 const CustomCursor = dynamic(() => import('@/components/custom-cursor'), { ssr: false });
 
@@ -157,12 +160,16 @@ export default function RootLayout({
         <header>
         </header>
         <main id="main-content" aria-label="Main content">
-          {children}
+          <SectionProvider>
+            <Header />
+            {children}
+          </SectionProvider>
           <CustomCursor />
           <SpeedInsights />
           <Analytics />
         </main>
         <footer>
+          <Footer />
         </footer>
       </body>
     </html>

@@ -14,7 +14,7 @@ export default function FAQSection() {
                     <AccordionItem value="item-1" className="border-b border-white/20">
                         <AccordionTrigger className="text-sm">Auf welche Technologien spezialisieren Sie sich?</AccordionTrigger>
                         <AccordionContent className="text-sm text-gray-400">
-                            Wir spezialisieren uns auf moderne Webtechnologien wie React, Next.js, Node.js und GraphQL. Unsere Expertise umfasst sowohl Frontend- als auch Backend-Entwicklung, was es uns ermöglicht, Full-Stack-Anwendungen zu erstellen, die robust, skalierbar und benutzerfreundlich sind.
+                            Wir spezialisieren uns auf moderne Webtechnologien wie React, Next.js, Node.js und Firebase. Unsere Expertise umfasst sowohl Frontend- als auch Backend-Entwicklung, was es uns ermöglicht, Full-Stack-Anwendungen zu erstellen, die robust, skalierbar und benutzerfreundlich sind.
                         </AccordionContent>
                     </AccordionItem>
                     <AccordionItem value="item-2" className="border-b border-white/20">

@@ -1,6 +1,6 @@
 'use client'
 
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import Image from "next/image"
 import Link from "next/link"
@@ -8,8 +8,18 @@ import { Button } from "@/components/ui/button"
 import { Mountain, Users, Briefcase, Code } from 'lucide-react'
 import teamData from "@/data/team.json"
 
+import { useSectionContext } from "../SectionContext";
+
 export default function TeamPage() {
-  const { scrollYProgress } = useScroll()
+  const { setSections } = useSectionContext();
+
+    useEffect(() => {
+        setSections([
+          { id: "our-team", label: "Unser Team" },
+          { id: "about-us", label: "Über uns" }, 
+        ]);
+      }, [setSections]);
+       
   const teamRef = useRef(null)
 
   // Function to determine grid columns based on team size
@@ -17,92 +27,7 @@ export default function TeamPage() {
     if (teamSize === 1) return 'grid-cols-1'
     if (teamSize === 2) return 'sm:grid-cols-2'
     return 'sm:grid-cols-2 lg:grid-cols-3'
-  }
-
-  function Header() {
-    const scrollToSection = (sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    return (
-      <header className="py-4 bg-black border-b border-white/20 sticky top-0 z-50">
-        <div className="container mx-auto px-4 max-w-5xl flex justify-between items-center">
-          {/* Left Navigation (Logo + Current Page Sections) */}
-          <div className="flex items-center space-x-6">
-            {/* Logo */}
-            <a
-              className="cursor-pointer p-1 px-2 flex items-center"
-              href="/"
-            >
-              <Image
-                src="/logo.webp"
-                alt="Nonext Logo"
-                width={100}
-                height={100}
-                priority
-                draggable={false}
-                className="select-none"
-              />
-            </a>
-
-            {/* Current Page Sections */}
-            <nav>
-              <ul className="flex space-x-4">
-                <li>
-                  <button
-                    onClick={() => scrollToSection("our-team")}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    Unser Team
-                  </button>
-                </li>
-                <li>
-                  <button
-                    onClick={() => scrollToSection("about-us")}
-                    className="text-sm text-gray-400 hover:text-white transition-colors"
-                  >
-                    Über uns
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          </div>
-
-          <nav>
-            <ul className="flex space-x-4">
-              <li>
-                <a
-                  href="/"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Home Seite
-                </a>
-              </li>
-              <li>
-                <a
-                  className="text-sm text-gray-400 underline-offset-4 underline hover:text-white transition-colors cursor-pointer"
-                >
-                  Team Seite
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/projects"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Projekte Seite
-                </a>
-              </li> 
-            </ul>
-          </nav>
-
-        </div>
-      </header>
-    )
-  }
+  } 
 
   function HeroSection() {
     return (
@@ -220,49 +145,12 @@ export default function TeamPage() {
         </div>
       </section>
     )
-  }
-
-  function Footer() {
-    return (
-      <footer className="py-8 border-t border-white/20 bg-black">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <Image
-                src="/logo.webp"
-                alt="Nonext Logo"
-                width={120}
-                height={120}
-                draggable={false}
-                className="select-none"
-              />
-            </div>
-            <div className="flex space-x-4">
-              <a href="https://www.instagram.com/nonext.at" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                Instagram
-              </a>
-              <a href="https://github.com/nonext-at" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/company/nonext" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                LinkedIn
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 text-center text-sm text-gray-400">
-            © {new Date().getFullYear()} nonext. Alle Rechte vorbehalten.
-          </div>
-        </div>
-      </footer>
-    )
-  }
+  } 
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <Header />
+    <div className="bg-black text-white min-h-screen"> 
       <HeroSection />
-      <TeamInfoSection />
-      <Footer />
+      <TeamInfoSection /> 
     </div>
   )
 }

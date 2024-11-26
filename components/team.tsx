@@ -83,19 +83,19 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                                                 <div>
                                                     <h4 className="text-sm font-semibold mb-2">Verbinden</h4>
                                                     <div className="flex space-x-3">
-                                                        <a href={member.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                                        <a href={member.contact.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                                             <Instagram size={18} />
                                                         </a>
-                                                        <a href={member.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                                        <a href={member.contact.github} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                                             <Github size={18} />
                                                         </a>
-                                                        <a href={member.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                                        <a href={member.contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                                             <Linkedin size={18} />
                                                         </a>
-                                                        <a href={`mailto:${member.email}`} className="text-gray-400 hover:text-white transition-colors">
+                                                        <a href={`mailto:${member.contact.email}`} className="text-gray-400 hover:text-white transition-colors">
                                                             <Mail size={18} />
                                                         </a>
-                                                        <a href={member.website} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                                        <a href={member.contact.website} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                                                             <Globe size={18} />
                                                         </a>
                                                     </div>

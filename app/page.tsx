@@ -19,6 +19,8 @@ import Footer from "@/components/footer"
 import projectsData from "@/data/projects.json"
 import teamMembers from "@/data/team.json"
 
+import { useSectionContext } from "./SectionContext";
+
 export default function Component() {
     const [activeService, setActiveService] = useState("design")
     const [activeProject, setActiveProject] = useState(0)
@@ -101,6 +103,17 @@ export default function Component() {
         },
     ]
 
+    const { setSections } = useSectionContext();
+
+    useEffect(() => {
+        setSections([
+          { id: "services", label: "Dienstleistung" },
+          { id: "projects", label: "Projekte" },
+          { id: "team", label: "Team" },
+          { id: "contact", label: "Kontakt" },
+        ]);
+      }, [setSections]);
+
     useEffect(() => {
         if (isInView) {
             controls.start("visible")
@@ -126,8 +139,7 @@ export default function Component() {
     }
 
     return (
-        <div className="bg-black text-white">
-            <Header />
+        <div className="bg-black text-white"> 
             <HeroSection />
             <AboutUsSection />
             <ServicesSection services={services} activeService={activeService} setActiveService={setActiveService} />
@@ -136,8 +148,7 @@ export default function Component() {
             <TeamSection teamMembers={teamMembers} expandedMember={expandedMember} toggleMember={toggleMember} />
             <Customers />
             <FAQSection />
-            <ContactSection />
-            <Footer />
+            <ContactSection /> 
         </div>
     )
 } 

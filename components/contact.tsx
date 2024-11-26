@@ -7,13 +7,13 @@ export default function ContactSection() {
                 <h2 className="text-3xl font-bold mb-4">Bereit, Ihr Projekt zu starten?</h2>
                 <p className="text-base mb-8 text-gray-400">Lassen Sie uns Ihre Ideen Wirklichkeit werden. Kontaktieren Sie uns noch heute.</p>
                 <div className="flex justify-center space-x-8">
-                    <a href="mailto:info@nonext.io" className="flex items-center text-white hover:text-gray-300 transition-colors">
+                    <a href="mailto:info@nonext.at" className="flex items-center text-white hover:text-gray-300 transition-colors">
                         <Mail className="w-6 h-6 mr-2" />
-                        <span>info@nonext.io</span>
+                        <span>info@nonext.at</span>
                     </a>
-                    <a href="https://www.instagram.com/nonext.io" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300 transition-colors">
+                    <a href="https://www.instagram.com/nonext.at" target="_blank" rel="noopener noreferrer" className="flex items-center text-white hover:text-gray-300 transition-colors">
                         <Instagram className="w-6 h-6 mr-2" />
-                        <span>@nonext.io</span>
+                        <span>@nonext.at</span>
                     </a>
                 </div>
             </div>

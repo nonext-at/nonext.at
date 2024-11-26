@@ -1,22 +1,65 @@
-import Image from "next/image"; // Import the Next.js Image component
+'use client';
+
+import { useState, useEffect } from "react";
+import Image from "next/image";
+import { useSectionContext } from "@/app/SectionContext";
+import { usePathname, useRouter } from "next/navigation";
+import { Menu, X } from 'lucide-react';
 
 export default function Header() {
-  const scrollToSection = (sectionId) => {
+  const { sections } = useSectionContext();
+  const pathname = usePathname();
+  const router = useRouter();
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  const handleLogoClick = () => {
+    if (pathname === "/") {
+      const element = document.getElementById("main-content");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      router.push("/");
+    }
+    setIsMenuOpen(false);
+  };
+
+  const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMenuOpen(false);
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
 
   return (
     <header className="py-4 bg-black border-b border-white/20 sticky top-0 z-50">
       <div className="container mx-auto px-4 max-w-5xl flex justify-between items-center">
-        {/* Left Navigation (Logo + Current Page Sections) */}
+        {/* Left Navigation */}
         <div className="flex items-center space-x-6">
           {/* Logo */}
           <div
             className="cursor-pointer p-1 px-2 flex items-center"
-            onClick={() => scrollToSection("main-content")}
+            onClick={handleLogoClick}
           >
             <Image
               src="/logo.webp"
@@ -29,51 +72,34 @@ export default function Header() {
             />
           </div>
 
-          {/* Current Page Sections */}
-          <nav>
+          {/* Current Page Sections - Visible on desktop */}
+          <nav className="hidden md:block">
             <ul className="flex space-x-4">
-              <li>
-                <button
-                  onClick={() => scrollToSection("services")}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Dienstleistung
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("projects")}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Projekte
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("team")}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Team
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => scrollToSection("contact")}
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Kontakt
-                </button>
-              </li>
+              {sections.map((section) => (
+                <li key={section.id}>
+                  <button
+                    onClick={() => scrollToSection(section.id)}
+                    className="text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    {section.label}
+                  </button>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
 
-        {/* Right Navigation (Separate Pages) */}
-        <nav>
+        {/* Right Navigation - Visible on desktop */}
+        <nav className="hidden md:block">
           <ul className="flex space-x-4">
             <li>
               <a
-                className="text-sm text-gray-400 hover:text-white transition-colors underline underline-offset-4 cursor-pointer"
+                href="/"
+                className={`relative text-sm transition-colors ${
+                  pathname === "/"
+                    ? "text-white active-link"
+                    : "text-gray-400 hover:text-white"
+                }`}
               >
                 Home Seite
               </a>
@@ -81,7 +107,11 @@ export default function Header() {
             <li>
               <a
                 href="/team"
-                className="text-sm text-gray-400 hover:text-white transition-colors"
+                className={`relative text-sm transition-colors ${
+                  pathname === "/team"
+                    ? "text-white active-link"
+                    : "text-gray-400 hover:text-white"
+                }`}
               >
                 Team Seite
               </a>
@@ -89,13 +119,90 @@ export default function Header() {
             <li>
               <a
                 href="/projects"
-                className="text-sm text-gray-400 hover:text-white transition-colors"
+                className={`relative text-sm transition-colors ${
+                  pathname === "/projects"
+                    ? "text-white active-link"
+                    : "text-gray-400 hover:text-white"
+                }`}
               >
                 Projekte Seite
               </a>
             </li>
           </ul>
         </nav>
+
+        {/* Mobile Menu Button */}
+        <button
+          className="md:hidden text-white"
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+        >
+          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+
+        {/* Mobile Menu */}
+        {isMenuOpen && (
+          <div 
+            className="fixed inset-0 bg-black bg-opacity-90 z-50 md:hidden"
+            onClick={closeMenu}
+          >
+            <div 
+              className="flex flex-col items-center justify-center h-full"
+              onClick={closeMenu}
+            >
+              <nav className="w-full max-w-sm">
+                <ul className="space-y-4 text-center">
+                  {sections.map((section) => (
+                    <li key={section.id}>
+                      <button
+                        onClick={() => scrollToSection(section.id)}
+                        className="text-lg text-white hover:text-gray-300 transition-colors"
+                      >
+                        {section.label}
+                      </button>
+                    </li>
+                  ))}
+                  <li className="py-2">
+                    <div className="w-16 h-px bg-white/20 mx-auto"></div>
+                  </li>
+                  <li>
+                    <a
+                      href="/"
+                      className={`text-lg ${
+                        pathname === "/" ? "text-white" : "text-gray-300 hover:text-white"
+                      }`}
+                      onClick={closeMenu}
+                    >
+                      Home Seite
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/team"
+                      className={`text-lg ${
+                        pathname === "/team" ? "text-white" : "text-gray-300 hover:text-white"
+                      }`}
+                      onClick={closeMenu}
+                    >
+                      Team Seite
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="/projects"
+                      className={`text-lg ${
+                        pathname === "/projects" ? "text-white" : "text-gray-300 hover:text-white"
+                      }`}
+                      onClick={closeMenu}
+                    >
+                      Projekte Seite
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );

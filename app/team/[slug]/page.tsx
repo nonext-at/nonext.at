@@ -11,6 +11,7 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { Github, Linkedin, Mail, Mountain, Code, Paintbrush, Zap, Layers, ExternalLink } from 'lucide-react'
 import teamData from "@/data/team.json"; // Import the JSON file 
+import { useSectionContext } from "@/app/SectionContext";
 
 const iconMap = {
   Code: <Code className="h-8 w-8 text-blue-400" />,
@@ -20,6 +21,17 @@ const iconMap = {
 };
 
 export default function BlockPage() {
+  const { setSections } = useSectionContext();
+
+    useEffect(() => {
+        setSections([
+          { id: "skills", label: "Fähigkeiten" },
+          { id: "expertise", label: "Expertise" },
+          { id: "projects", label: "Projekte" },
+          { id: "contact", label: "Kontakt" },
+        ]);
+      }, [setSections]);
+      
   const { slug } = useParams();
 
   const teamMember = teamData.find((member) => member.slug === slug);
@@ -49,72 +61,7 @@ export default function BlockPage() {
     setIsSubmitting(false)
     setIsSubmitted(true)
   }
-
-  function Header() { 
-    const scrollToSection = (sectionId) => {
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    };
-
-    return (
-      <header className="py-4 bg-black border-b border-white/20 sticky top-0 z-50">
-      <div className="container mx-auto px-4 max-w-5xl flex justify-between items-center">
-        {/* Logo */}
-        <a href="/" className="flex items-center cursor-pointer p-1 px-2">
-          <Image
-            src="/logo.webp"
-            alt="Nonext Logo"
-            width={100}
-            height={100}
-            priority
-            draggable={false}
-            className="select-none"
-          />
-        </a>
-
-        {/* Navigation */}
-        <nav>
-          <ul className="flex space-x-4">
-            <li>
-              <button
-                onClick={() => scrollToSection("skills")}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                Fähigkeiten
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("expertise")}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                Expertise
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("projects")}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                Projekte
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => scrollToSection("contact")}
-                className="text-sm text-gray-400 hover:text-white transition-colors"
-              >
-                Kontakt
-              </button>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    )
-  }
+ 
 
   function HeroSection() {
     const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
@@ -414,52 +361,15 @@ const ContactOption = ({ icon, title, description, link, glowColor, delay }) => 
       </div>
     </section>
     )
-  }
-
-  function Footer() {
-    return (
-      <footer className="py-8 border-t border-white/20 bg-black">
-        <div className="container mx-auto px-4 max-w-5xl">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <Image
-                src="/logo.webp"
-                alt="Nonext Logo"
-                width={120}
-                height={120}
-                draggable={false}
-                className="select-none"
-              />
-            </div>
-            <div className="flex space-x-4">
-              <a href="https://www.instagram.com/nonext.at" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                Instagram
-              </a>
-              <a href="https://github.com/nonext-at" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                GitHub
-              </a>
-              <a href="https://www.linkedin.com/company/nonext" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-300 transition-colors">
-                LinkedIn
-              </a>
-            </div>
-          </div>
-          <div className="mt-8 text-center text-sm text-gray-400">
-            © {new Date().getFullYear()} nonext. Alle Rechte vorbehalten.
-          </div>
-        </div>
-      </footer>
-    )
-  }
+  } 
 
   return (
-    <div className="bg-black text-white min-h-screen">
-      <Header />
+    <div className="bg-black text-white min-h-screen"> 
       <HeroSection />
       <SkillsSection />
       <ExpertiseSection />
       <ProjectsSection /> 
-      <ContactSection />
-      <Footer />
+      <ContactSection /> 
     </div>
   )
 }

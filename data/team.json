@@ -13,7 +13,7 @@
             "Hat ein Talent dafür, Bugs im Code in Rekordzeit zu finden"
         ],
         "featuredProjects": [
-            { "name": "Fränkis", "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub.", "image": "/projekte/fraenkis.webp", "link": "https://fraenkis.nonext.at" },
+            { "name": "Fränkis", "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub.", "image": "/projekte/fraenkis.webp", "link": "https://fraenkis.at" },
             { "name": "Reality Break", "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern.", "image": "/projekte/realitybreak.webp", "link": "https://reality-break.nonext.at" },
             { "name": "nonext", "description": "Eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert.", "image": "/projekte/nonext.webp", "link": "https://nonext.at" }
         ],
@@ -45,6 +45,7 @@
             }
         ],
         "contact": {
+            "instagram": "maikeru.jpg",
             "email": "mp@nonext.at",
             "github": "https://github.com/MaikeruDev",
             "linkedin": "https://www.linkedin.com/in/michael-prietl-93a6b625b/",
@@ -65,7 +66,7 @@
             "Kann ein div zentrieren (manchmal)"
         ],
         "featuredProjects": [
-            { "name": "Fränkis", "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub.", "image": "/projekte/fraenkis.webp", "link": "https://fraenkis.nonext.at" },
+            { "name": "Fränkis", "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub.", "image": "/projekte/fraenkis.webp", "link": "https://fraenkis.at" },
             { "name": "Reality Break", "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern.", "image": "/projekte/realitybreak.webp", "link": "https://reality-break.nonext.at" },
             { "name": "nonext", "description": "Eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert.", "image": "/projekte/nonext.webp", "link": "https://nonext.at" }
         ],
@@ -97,6 +98,7 @@
             }
         ],
         "contact": {
+            "instagram": "noel_her",
             "email": "nh@nonext.at",
             "github": "https://github.com/FIEF-nohell",
             "linkedin": "https://www.linkedin.com/in/noel-hermann-a9b925243/",

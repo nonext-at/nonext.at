@@ -4,7 +4,7 @@
         "title": "Fränkis",
         "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
         "image": "/projekte/fraenkis.webp",
-        "link": "https://fraenkis.nonext.at",
+        "link": "https://fraenkis.at",
         "technologies": [
             "React",
             "Next.js",
