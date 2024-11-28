@@ -113,20 +113,30 @@ export default function TeamSection({ teamMembers, expandedMember, toggleMember 
                         "Einzeln sind wir geschickte Entwickler. Zusammen erschaffen wir digitale Meisterwerke."
                     </p>
                 </div>
-                <div className="mt-8 flex justify-center space-x-6">
-                    <div className="flex items-center">
-                        <Coffee className="text-yellow-400 mr-2 h-4 w-4" style={{ filter: "drop-shadow(0 0 5px rgba(251, 191, 36, 0.5))" }} />
+                <div className="mt-8 flex flex-col sm:flex-row justify-center sm:space-x-6 space-y-4 sm:space-y-0">
+                    <div className="flex items-center mx-auto md:mx-0">
+                        <Coffee
+                            className="text-yellow-400 mr-2 h-4 w-4"
+                            style={{ filter: "drop-shadow(0 0 5px rgba(251, 191, 36, 0.5))" }}
+                        />
                         <span className="text-sm text-gray-400">Angetrieben von Kaffee</span>
                     </div>
-                    <div className="flex items-center">
-                        <Code className="text-blue-400 mr-2 h-4 w-4" style={{ filter: "drop-shadow(0 0 5px rgba(59, 130, 246, 0.5))" }} />
+                    <div className="flex items-center mx-auto md:mx-0">
+                        <Code
+                            className="text-blue-400 mr-2 h-4 w-4"
+                            style={{ filter: "drop-shadow(0 0 5px rgba(59, 130, 246, 0.5))" }}
+                        />
                         <span className="text-sm text-gray-400">Getrieben von Leidenschaft</span>
                     </div>
-                    <div className="flex items-center">
-                        <Zap className="text-green-400 mr-2 h-4 w-4" style={{ filter: "drop-shadow(0 0 5px rgba(52, 211, 153, 0.5))" }} />
+                    <div className="flex items-center mx-auto md:mx-0">
+                        <Zap
+                            className="text-green-400 mr-2 h-4 w-4"
+                            style={{ filter: "drop-shadow(0 0 5px rgba(52, 211, 153, 0.5))" }}
+                        />
                         <span className="text-sm text-gray-400">Inspiriert von Innovation</span>
                     </div>
                 </div>
+
             </motion.div>
         </section>
     )
