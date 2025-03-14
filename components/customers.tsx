@@ -12,19 +12,7 @@ const Component = () => {
                     pauseOnHover={false}
                     blurBorders={false}
                     blurBorderColor={'#000'}
-                >
-                    <Slider.Slide>
-                        <Image
-                            priority={true}
-                            draggable={false}
-                            className="select-none"
-                            src="/carousel/spoe.webp"
-                            alt="any"
-                            width={100}
-                            height={100}
-                            style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
-                        />
-                    </Slider.Slide>
+                > 
                     <Slider.Slide>
                         <Image
                             priority={true}
