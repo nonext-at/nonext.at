@@ -1,6 +1,20 @@
 [
     {
         "id": "1",
+        "title": "EasyRoom",
+        "description": "Eine moderne Self-Check-in-Hotel-Seite für sorgenfreie Übernachtungen. Gäste können bequem online buchen, flexibel ein- und auschecken und ihren Aufenthalt komplett digital verwalten.",
+        "image": "/projekte/easyroom.webp",
+        "link": "https://easyroom.co.at",
+        "technologies": [
+            "React",
+            "Next.js",
+            "motion",
+            "shadcn",
+            "Tailwind",
+        ]
+    }
+    {
+        "id": "2",
         "title": "Fränkis",
         "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
         "image": "/projekte/fraenkis.webp",
@@ -13,13 +27,13 @@
             "Tailwind",
             "Firebase"
         ]
-    },
+    }, 
     {
         "id": "2",
         "title": "Reality Break",
         "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.",
         "image": "/projekte/realitybreak.webp",
-        "link": "https://reality-break.nonext.at",
+        "link": "https://reality-break.at",
         "technologies": [
             "React",
             "Next.js",
@@ -30,7 +44,7 @@
         ]
     },
     {
-        "id": "3",
+        "id": "4",
         "title": "nonext",
         "description": "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.",
         "image": "/projekte/nonext.webp",
