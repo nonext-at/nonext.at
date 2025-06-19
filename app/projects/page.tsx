@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group"
+                className="group bg-white/5 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div className="order-2 md:order-1">

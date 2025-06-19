@@ -16,7 +16,7 @@ export default function TeamPage() {
     useEffect(() => {
         setSections([
           { id: "our-team", label: "Unser Team" },
-          { id: "about-us", label: "Über uns" }, 
+          { id: "about-us", label: "Über uns" },
         ]);
       }, [setSections]);
        
@@ -27,7 +27,7 @@ export default function TeamPage() {
     if (teamSize === 1) return 'grid-cols-1'
     if (teamSize === 2) return 'sm:grid-cols-2'
     return 'sm:grid-cols-2 lg:grid-cols-3'
-  } 
+  }
 
   function HeroSection() {
     return (
