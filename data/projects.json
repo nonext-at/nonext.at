@@ -15,10 +15,10 @@
     },
     {
         "id": "2",
-        "title": "Fränkis",
-        "description": "Eine moderne, mobilfreundliche Seite für Fränkis Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
-        "image": "/projekte/fraenkis.webp",
-        "link": "https://fraenkis.at",
+        "title": "Nobody",
+        "description": "Eine moderne, mobilfreundliche Seite für The Nobody Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
+        "image": "/projekte/nobody.webp",
+        "link": "https://thenobody.bar/",
         "technologies": [
             "React",
             "Next.js",
@@ -27,20 +27,19 @@
             "Tailwind",
             "Firebase"
         ]
-    }, 
+    },
     {
         "id": "3",
-        "title": "Reality Break",
-        "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.",
-        "image": "/projekte/realitybreak.webp",
-        "link": "https://reality-break.at",
+        "title": "Klavier Transport",
+        "description": "Professionelle Website für einen spezialisierten Klaviertransport-Dienst. Ein klares Kontaktformular und relevante Informationen sorgen mit einem schlichten Design für einen starken ersten Eindruck.",
+        "image": "/projekte/klaviertransport.webp",
+        "link": "https://www.klavier-transport.at/",
         "technologies": [
             "React",
             "Next.js",
-            "motion",
             "shadcn",
             "Tailwind",
-            "Firebase"
+            "Nodemailer"
         ]
     },
     {
@@ -57,6 +56,21 @@
             "Tailwind",
             "Firebase",
             "Three.js"
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Reality Break",
+        "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.",
+        "image": "/projekte/realitybreak.webp",
+        "link": "https://reality-break.at",
+        "technologies": [
+            "React",
+            "Next.js",
+            "motion",
+            "shadcn",
+            "Tailwind",
+            "Firebase"
         ]
     }
 ]

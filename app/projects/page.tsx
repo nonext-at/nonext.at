@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
-import Image from "next/image" 
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink } from 'lucide-react'
@@ -13,14 +13,12 @@ import { useSectionContext } from "../SectionContext";
 export default function ProjectsPage() {
   const { setSections } = useSectionContext();
 
-    useEffect(() => {
-        setSections([ 
-        ]);
-      }, [setSections]);
+  useEffect(() => {
+    setSections([
+    ]);
+  }, [setSections]);
 
   const projectsRef = useRef(null)
- 
- 
 
   function HeroSection() {
     return (
@@ -95,11 +93,11 @@ export default function ProjectsPage() {
       </section>
     )
   }
- 
+
   return (
-    <div className="bg-black text-white min-h-screen"> 
+    <div className="bg-black text-white min-h-screen">
       <HeroSection />
-      <ProjectsSection /> 
+      <ProjectsSection />
     </div>
   )
 }
