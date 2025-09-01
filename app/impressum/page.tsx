@@ -19,7 +19,7 @@ export default function ImpressumPage() {
                             </h2>
                             <p className="mb-1">Noel Hermann &amp; Michael Prietl</p>
                             <p className="mb-1">Gesellschaft bürgerlichen Rechts (GesbR)</p>
-                            <p className="mb-1">Verwendete Geschäftsbezeichnung: NoNext</p>
+                            <p className="mb-1">Verwendete Geschäftsbezeichnung: nonext</p>
                         </div>
 
                         <div>
@@ -54,15 +54,6 @@ export default function ImpressumPage() {
                                         +43 650 4721448
                                     </a>
                                 </li>
-                                <li>
-                                    Kontaktformular:{' '}
-                                    <Link
-                                        href="/kontakt"
-                                        className="underline underline-offset-4 hover:no-underline"
-                                    >
-                                        nonext.at/kontakt
-                                    </Link>
-                                </li>
                             </ul>
                         </div>
 
@@ -72,7 +63,7 @@ export default function ImpressumPage() {
                             </h2>
                             <p>
                                 Entwicklung und Betrieb von webbasierten Kommunikations- und
-                                Softwarelösungen (SaaS), insbesondere Videomeeting-Dienste.
+                                Softwarelösungen (SaaS) mithilfe von diversen KI Technologien.
                             </p>
                         </div>
 
@@ -89,14 +80,17 @@ export default function ImpressumPage() {
                                     Standort der Gewerbeberechtigung (Noel): Bundesstraße 101,
                                     6923 Lauterach
                                 </li>
-                                <li>Standort der Gewerbeberechtigung (Michael): [Adresse/Ort]</li>
+                                <li>
+                                    Standort der Gewerbeberechtigung (Michael): Landstraße 33,
+                                    6973 Höchst
+                                </li>
                                 <li>Zuständige Behörde: Bezirkshauptmannschaft Bregenz</li>
-                                <li>GISA-Zahl(en): [Noel: …] [Michael: …]</li>
+                                {/* <li>GISA-Zahl(en): [Noel: …] [Michael: …]</li> */}
                                 <li>Mitgliedschaft: Wirtschaftskammer Vorarlberg</li>
                             </ul>
                         </div>
 
-                        <div>
+                        {/* <div>
                             <h2 className="text-2xl font-semibold text-white mb-3">
                                 Umsatzsteuer / UID
                             </h2>
@@ -105,7 +99,7 @@ export default function ImpressumPage() {
                                 (Kleinunternehmerregelung); es wird keine Umsatzsteuer
                                 ausgewiesen. [Derzeit keine UID vergeben.]
                             </p>
-                        </div>
+                        </div> */}
 
                         <div>
                             <h2 className="text-2xl font-semibold text-white mb-3">
