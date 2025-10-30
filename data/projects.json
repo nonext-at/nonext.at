@@ -1,6 +1,20 @@
 [
-        {
+    {
         "id": "1",
+        "title": "Pokerverein Gaißau",
+        "description": "Eine schlanke Web-App für den Pokerverein Gaißau. Mitglieder verwalten Termine, Rankings und Anmeldungen direkt im Browser – mobiloptimiert, ohne Hürden. Fokus auf modernes UI, Performance und Barrierefreiheit.",
+        "image": "/projekte/pvg.webp",
+        "link": "#",
+        "technologies": [
+            "React",
+            "Next.js",
+            "shadcn",
+            "Tailwind",
+            "Nodemailer"
+        ]
+    },
+    {
+        "id": "2",
         "title": "nonext Meetings",
         "description": "Eine elegante Web-App für Online-Videokonferenzen. Nutzer können direkt im Browser Meetings starten oder bestehenden Räumen beitreten – ganz ohne Anmeldung. Fokus auf modernes UI, Performance und Benutzerfreundlichkeit.",
         "image": "/projekte/meetings.webp",
@@ -15,7 +29,7 @@
         ]
     },
     {
-        "id": "2",
+        "id": "3",
         "title": "EasyRoom",
         "description": "Eine moderne Self-Check-in-Hotel-Seite für sorgenfreie Übernachtungen. Gäste können bequem online buchen, flexibel ein- und auschecken und ihren Aufenthalt komplett digital verwalten.",
         "image": "/projekte/easyroom.webp",
@@ -29,7 +43,7 @@
         ]
     },
     {
-        "id": "3",
+        "id": "4",
         "title": "Nobody",
         "description": "Eine moderne, mobilfreundliche Seite für The Nobody Pub. Entdecken Sie Events, durchstöbern Sie die Speisekarte und verbinden Sie sich mit Ihrem Lieblingslokal.",
         "image": "/projekte/nobody.webp",
@@ -44,7 +58,7 @@
         ]
     },
     {
-        "id": "4",
+        "id": "5",
         "title": "Klavier Transport",
         "description": "Professionelle Website für einen spezialisierten Klaviertransport-Dienst. Ein klares Kontaktformular und relevante Informationen sorgen mit einem schlichten Design für einen starken ersten Eindruck.",
         "image": "/projekte/klaviertransport.webp",
@@ -58,7 +72,7 @@
         ]
     },
     {
-        "id": "5",
+        "id": "6",
         "title": "nonext",
         "description": "nonext ist eine elegante One-Pager-Seite, die unsere Top-Projekte präsentiert. Es ist ein einfaches und intuitives Gateway, um unsere Arbeit und Kooperationen zu erkunden.",
         "image": "/projekte/nonext.webp",
@@ -74,7 +88,7 @@
         ]
     },
     {
-        "id": "6",
+        "id": "7",
         "title": "Reality Break",
         "description": "Die offizielle Seite für Reality Break mit Musik, Tour-Infos und Bandmitgliedern. Eine nahtlose Möglichkeit für Fans, sich mit der Band zu verbinden.",
         "image": "/projekte/realitybreak.webp",

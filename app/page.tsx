@@ -41,45 +41,7 @@ export default function Component() {
         { id: "support", icon: <Users className="h-6 w-6" />, title: "Wartung & Support", description: "Bereitstellung technischer Unterstützung und regelmäßiger Updates, um Ihre  Produkte reibungslos und sicher am Laufen zu halten.", features: ["24/7-Support", "Sicherheitsupdates", "Überwachung", "Aktualisierungen", "Feature-Erweiterungen", "Schulung & Dokumentation"] },
     ] 
 
-    /* const teamMembers = [
-        {
-            name: "Michael Prietl",
-            role: "Gründer, Entwickler",
-            image: "/team/michael.webp",
-            bio: "Michael ist ein leidenschaftlicher Frontend-Entwickler, der moderne Technologien mit ansprechendem Design verbindet. Mit Fokus auf React, TypeScript und Next.js schafft er intuitive Benutzeroberflächen, die sowohl funktional als auch ästhetisch überzeugen. Er liebt es, komplexe Probleme in einfache Lösungen zu übersetzen und legt besonderen Wert auf sauberen, wartbaren Code und exzellente Nutzererfahrungen.",
-            skills: ["React", "TypeScript", "Next.js", "Tailwind CSS", "Framer Motion"],
-            funFacts: [
-                "Kennt den Unterschied zwischen 'margin' und 'padding' blind",
-                "Schreibt eleganteren Code als seine eigene Handschrift",
-                "Hat ein Talent dafür, Bugs im Code in Rekordzeit zu finden",
-            ],
-            quote: "Design ist nicht, wie es aussieht – Design ist, wie es funktioniert.",
-            instagram: "https://www.instagram.com/maikeru.jpg/",
-            github: "https://github.com/MaikeruDev",
-            linkedin: "https://www.linkedin.com/in/michael-prietl-93a6b625b/",
-            email: "mp@nonext.at",
-            website: "https://michael.nonext.at",
-        },
-        {
-            name: "Noel Hermann",
-            role: "Gründer, Entwickler",
-            image: "/team/noel.webp",
-            bio: "Noel verbindet kreatives Design mit technischer Präzision und sorgt dafür, dass Frontend und Backend harmonisch zusammenarbeiten. Von der ersten Codezeile bis zur finalen Auslieferung stellt er sicher, dass unsere Anwendungen nicht nur leistungsstark, sondern auch benutzerfreundlich sind. Sein Anspruch ist es, Lösungen zu schaffen, die nicht nur gut aussehen, sondern auch reibungslos funktionieren – und das auf jeder Ebene.",
-            skills: ["React", "Next.js", "Node.js", "Datenbanken", "API", "UI/UX"],
-            funFacts: [
-                "Hat schon mal aus Versehen ein Projekt in der Pause fertiggestellt",
-                "Träumt manchmal von einem Leben ohne Merge-Konflikte",
-                "Kann ein div zentrieren (manchmal)",
-            ],
-            quote: "Ein Design ist dann perfekt, wenn man es nicht erklären, sondern nur fühlen kann.",
-            instagram: "https://www.instagram.com/noel_her/",
-            github: "https://github.com/FIEF-nohell",
-            linkedin: "https://www.linkedin.com/in/noel-hermann-a9b925243/",
-            email: "nh@nonext.at",
-            website: "https://noel.nonext.at",
-        }
-    ] */
-
+    
     const processSteps = [
         {
             title: "Erstberatung",

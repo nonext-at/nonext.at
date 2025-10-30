@@ -12,14 +12,26 @@ const Component = () => {
                     pauseOnHover={false}
                     blurBorders={false}
                     blurBorderColor={'#000'}
-                > 
+                >
                     <Slider.Slide>
                         <Image
                             priority={true}
                             draggable={false}
-                            className="select-none scale-95"
-                            src="/carousel/fraenkis.webp"
-                            alt="any2"
+                            className="select-none scale-95 grayscale"
+                            src="/carousel/nobody.webp"
+                            alt="nobody logo"
+                            width={100}
+                            height={100}
+                            style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
+                        />
+                    </Slider.Slide>
+                    <Slider.Slide>
+                        <Image
+                            priority={true}
+                            draggable={false}
+                            className="select-none scale-150 invert"
+                            src="/carousel/easyroom.webp"
+                            alt="easyroom logo"
                             width={100}
                             height={100}
                             style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
@@ -31,7 +43,7 @@ const Component = () => {
                             draggable={false}
                             className="select-none scale-125"
                             src="/carousel/reality-break.webp"
-                            alt="any"
+                            alt="reality break logo"
                             width={100}
                             height={100}
                             style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
@@ -43,7 +55,7 @@ const Component = () => {
                             draggable={false}
                             className="select-none scale-150"
                             src="/carousel/nonext.webp"
-                            alt="any2"
+                            alt="nonext logo"
                             width={100}
                             height={100}
                             style={{ width: 'auto', height: 'auto' }} // Maintain aspect ratio
