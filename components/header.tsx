@@ -119,9 +119,9 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="/projects"
+                href="/projekte"
                 className={`relative text-sm transition-colors ${
-                  pathname === "/projects"
+                  pathname === "/projekte"
                     ? "text-white active-link"
                     : "text-gray-400 hover:text-white"
                 }`}
@@ -190,9 +190,9 @@ export default function Header() {
                   </li>
                   <li>
                     <a
-                      href="/projects"
+                      href="/projekte"
                       className={`text-lg ${
-                        pathname === "/projects" ? "text-white" : "text-gray-300 hover:text-white"
+                        pathname === "/projekte" ? "text-white" : "text-gray-300 hover:text-white"
                       }`}
                       onClick={closeMenu}
                     >
