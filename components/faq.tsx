@@ -1,9 +1,44 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { motion } from "framer-motion";
 
+const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Auf welche Technologien spezialisieren Sie sich?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Wir spezialisieren uns auf moderne Webtechnologien wie React, Next.js, Node.js und Firebase. Unsere Expertise umfasst sowohl Frontend- als auch Backend-Entwicklung, was es uns ermöglicht, Full-Stack-Anwendungen zu erstellen, die robust, skalierbar und benutzerfreundlich sind.",
+            },
+        },
+        {
+            "@type": "Question",
+            "name": "Wie lange dauert ein typisches Projekt?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Die Projektdauer variiert je nach Komplexität und Umfang der Arbeit. Eine einfache Website kann 4-6 Wochen dauern, während eine komplexere Webanwendung 3-6 Monate in Anspruch nehmen kann. Wir stellen Ihnen nach unserer ersten Beratung und Projektplanung eine detaillierte Zeitschätzung zur Verfügung.",
+            },
+        },
+        {
+            "@type": "Question",
+            "name": "Bieten Sie laufende Unterstützung und Wartung an?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Ja, wir bieten verschiedene Support- und Wartungspakete an, um Ihre Website oder Anwendung reibungslos am Laufen zu halten. Diese können regelmäßige Updates, Sicherheitspatches, Leistungsoptimierung und technischen Support umfassen. Wir arbeiten mit Ihnen zusammen, um einen Supportplan zu erstellen, der Ihren spezifischen Bedürfnissen entspricht.",
+            },
+        },
+    ],
+};
+
 export default function FAQSection() {
     return (
         <section id="faq" className="py-16 relative z-10 bg-black">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+            />
             <motion.div
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}

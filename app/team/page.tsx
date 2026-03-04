@@ -147,10 +147,56 @@ export default function TeamPage() {
     )
   } 
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nonext.at",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Team",
+        "item": "https://nonext.at/team",
+      },
+    ],
+  };
+
+  const teamPageJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "name": "Unser Team",
+    "description": "Lernen Sie die kreativen Köpfe kennen, die nonext antreiben und innovative Lösungen für unsere Kunden entwickeln.",
+    "url": "https://nonext.at/team",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "nonext",
+      "member": teamData.map((member) => ({
+        "@type": "Person",
+        "name": member.name,
+        "jobTitle": member.role,
+        "image": `https://nonext.at${member.image}`,
+        "url": `https://nonext.at/team/${member.slug}`,
+      })),
+    },
+  };
+
   return (
-    <div className="bg-black text-white min-h-screen"> 
+    <div className="bg-black text-white min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(teamPageJsonLd) }}
+      />
       <HeroSection />
-      <TeamInfoSection /> 
+      <TeamInfoSection />
     </div>
   )
 }

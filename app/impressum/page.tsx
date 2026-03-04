@@ -3,9 +3,32 @@
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 
+const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://nonext.at",
+        },
+        {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Impressum",
+            "item": "https://nonext.at/impressum",
+        },
+    ],
+};
+
 export default function ImpressumPage() {
     return (
         <section className="relative z-10 py-16 sm:pt-24 overflow-hidden bg-black">
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+            />
             <div className="container mx-auto px-4 max-w-5xl relative z-10">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}

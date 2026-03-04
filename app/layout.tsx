@@ -114,13 +114,19 @@ export default function RootLayout({
                     "@type": "ListItem",
                     "position": 2,
                     "name": "Projekte",
-                    "item": "https://nonext.at/projects",
+                    "item": "https://nonext.at/projekte",
                   },
                   {
                     "@type": "ListItem",
                     "position": 3,
                     "name": "Team",
                     "item": "https://nonext.at/team",
+                  },
+                  {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "Impressum",
+                    "item": "https://nonext.at/impressum",
                   },
                 ],
               },
@@ -130,6 +136,15 @@ export default function RootLayout({
                 "name": "nonext",
                 "url": "https://nonext.at",
                 "logo": "https://nonext.at/logo.png",
+                "foundingDate": "2024",
+                "founder": [
+                  { "@type": "Person", "name": "Noel Hermann" },
+                  { "@type": "Person", "name": "Michael Prietl" },
+                ],
+                "numberOfEmployees": {
+                  "@type": "QuantitativeValue",
+                  "value": 2,
+                },
                 "contactPoint": {
                   "@type": "ContactPoint",
                   "telephone": "+4369918357220",
@@ -150,6 +165,112 @@ export default function RootLayout({
                   "addressRegion": "Vorarlberg",
                   "postalCode": "6973",
                   "addressCountry": "AT",
+                },
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                "name": "nonext",
+                "url": "https://nonext.at",
+                "inLanguage": "de",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "nonext",
+                  "url": "https://nonext.at",
+                },
+              },
+              {
+                "@context": "https://schema.org",
+                "@type": "ProfessionalService",
+                "name": "nonext",
+                "url": "https://nonext.at",
+                "logo": "https://nonext.at/logo.png",
+                "image": "https://nonext.at/og-image.png",
+                "description": "nonext in Vorarlberg erstellt moderne Websites und Webapps mit innovativem Design.",
+                "telephone": "+4369918357220",
+                "email": "info@nonext.at",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "Bundesstraße 101",
+                  "addressLocality": "Lauterach",
+                  "addressRegion": "Vorarlberg",
+                  "postalCode": "6923",
+                  "addressCountry": "AT",
+                },
+                "geo": {
+                  "@type": "GeoCoordinates",
+                  "latitude": 47.4775,
+                  "longitude": 9.7314,
+                },
+                "areaServed": {
+                  "@type": "Country",
+                  "name": "AT",
+                },
+                "priceRange": "$$",
+                "openingHoursSpecification": {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "17:00",
+                },
+                "sameAs": [
+                  "https://www.facebook.com/nonext",
+                  "https://www.instagram.com/nonext.at",
+                  "https://www.linkedin.com/company/nonext-at",
+                ],
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Webentwicklung Dienstleistungen",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Design",
+                        "description": "UI/UX Design, Wireframing, Prototyping und Markenidentität",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Entwicklung",
+                        "description": "Frontend- und Backend-Entwicklung mit React, Next.js und Node.js",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Optimierung",
+                        "description": "Performance-Audits, Code-Optimierung und Core Web Vitals",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "SEO & Analyse",
+                        "description": "Keyword-Recherche, On-Page-SEO, Technisches SEO und Analytics",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Hosting & Bereitstellung",
+                        "description": "Cloud-Hosting, SSL-Zertifikate, automatisierte Backups und Überwachung",
+                      },
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Wartung & Support",
+                        "description": "24/7-Support, Sicherheitsupdates und Feature-Erweiterungen",
+                      },
+                    },
+                  ],
                 },
               },
             ]),

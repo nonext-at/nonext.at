@@ -94,8 +94,61 @@ export default function ProjectsPage() {
     )
   }
 
+  const collectionJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Unsere Projekte",
+    "description": "Entdecken Sie unsere innovativen Lösungen und kreativen Arbeiten.",
+    "url": "https://nonext.at/projekte",
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": projectsData.map((project, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": project.title,
+          "description": project.description,
+          "image": `https://nonext.at${project.image}`,
+          "url": project.link !== "#" ? project.link : undefined,
+          "creator": {
+            "@type": "Organization",
+            "name": "nonext",
+          },
+        },
+      })),
+    },
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://nonext.at",
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Projekte",
+        "item": "https://nonext.at/projekte",
+      },
+    ],
+  };
+
   return (
     <div className="bg-black text-white min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <HeroSection />
       <ProjectsSection />
     </div>
